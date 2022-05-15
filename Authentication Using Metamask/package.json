@@ -1,0 +1,14 @@
+{
+  "name": "authentication-using-metamask",
+  "version": "1.0.0",
+  "description": "Authentication Using Metamask for Blockchain based health records",
+  "main": "metamask.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neeraj",
+  "license": "ISC",
+  "dependencies": {
+    "@metamask/onboarding": "^1.0.1"
+  }
+}
