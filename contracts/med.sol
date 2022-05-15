@@ -18,7 +18,8 @@ contract medical{
     Gets the data of the patient
     @params _patientId
     ****/
-    function getPatientData(string memory _patientId) public view returns(struct){
+    // mapping(uint => patientsData)mix;
+    function getPatientData(string memory _patientId) public view returns(patientsData memory){
         patientsData.patientName = getPatientName(_patientId);
         patientsData.patientMobileNumber = getPatientMobileNumber(_patientId);
         patientsData.patientGender = getPatientGender(_patientId);
