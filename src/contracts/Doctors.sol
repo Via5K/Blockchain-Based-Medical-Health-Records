@@ -2,10 +2,10 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-contract doctors{
+contract Doctors{
     struct doctorInfo{
         string doctorName;
-        string doctorId;
+        // string doctorId;
         string doctorSpeciality;
         string doctorHospital;
         string doctorGender;

@@ -1,0 +1,103 @@
+{
+  "contractName": "Medical",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820174f56cc685229b167a4c6ea9d2d75484aa184838d4c82b1957ff053719ef9f20029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820174f56cc685229b167a4c6ea9d2d75484aa184838d4c82b1957ff053719ef9f20029",
+  "sourceMap": "163:2982:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;163:2982:1;;;;;;;",
+  "deployedSourceMap": "163:2982:1:-;;;;;",
+  "source": "\r\n// SPDX-License-Identifier: GPL-3.0\r\n\r\n// // pragma solidity >=0.7.0 <0.9.0;\r\n// pragma solidity ^0.8.4;\r\n// import './Patients.sol';\r\npragma solidity >=0.5.1;\r\ncontract Medical{\r\n//     struct patientsData{\r\n//         string patientName;\r\n//         string patientId;\r\n//         string patientMobileNumber;\r\n//         string patientGender;\r\n//         string patientAddress;\r\n//         string patientDateOfBirth;\r\n//     }\r\n//     //stores the doctors addresses considered as a database....\r\n//     // address[] authorised;\r\n//     mapping (address=>bool)authorised;\r\n//     //Owner, the deployer adds the doctors into the database....\r\n//     address public owner;\r\n\r\n//     //called once only and stores the address of the deployer.\r\n//     constructor(){\r\n//         owner = msg.sender;\r\n//     }\r\n\r\n//     //checks for the owner\r\n//     modifier isOwner{\r\n//         require(msg.sender==owner,'Opps, You will need to contact the owner');\r\n//         _;\r\n//     }\r\n    \r\n//     //only the deployer of the contract can add the addresses in the address array of the doctors.\r\n//     function addDoctors(address _doctorAddress) isOwner public {\r\n//         // authorised.push(_doctorAddress);\r\n//         authorised[_doctorAddress] = true;\r\n//     }\r\n\r\n//     function findAuthorised(address caller) private returns(bool){\r\n//         //now here traverse in the addresses array and check if we have a match for the address then return true else return false\r\n//         return authorised[caller];\r\n//     }\r\n\r\n//     modifier onlyDoctorOrPatient{\r\n//         require(findAuthorised(msg.sender),'You are Not authorised to Access the data');\r\n//         _;\r\n//     }\r\n\r\n\r\n    \r\n//     /**** \r\n//     Gets the data of the patient\r\n//     params _patientId\r\n//     ****/\r\n//     function getPatientData(string memory _patientId) onlyDoctorOrPatient public view returns(patientsData memory){\r\n//         //check that if the caller is the doctor or the person itself.\r\n//         patientsData.patientName = getPatientName(_patientId);\r\n//         patientsData.patientMobileNumber = getPatientMobileNumber(_patientId);\r\n//         patientsData.patientGender = getPatientGender(_patientId);\r\n//         patientsData.patientAddress = getPatientAddress(_patientId);\r\n//         patientsData.patientDateOfBirth = getPatientDateOfBirth(_patientId);\r\n//         patientsData.addPatientAllergies = getPatientAllergies(_patientId);\r\n//         return patientsData;\r\n//     }\r\n//     /**** \r\n//     Adds the data of the patient\r\n//     params _patientId\r\n//     ****/\r\n//     function addPatientData(string memory _patientId, string memory _name, string memory _address, string memory _mobileNumber, string memory _gender, string[] memory allergies, string memory _dateOfBirth) onlyDoctorOrPatient public {\r\n//         addPatientName(_patientId, _name);\r\n//         addPatientMobileNumber(_patientId, _mobileNumber);\r\n//         addPatientGender(_patientId, _gender);\r\n//         addPatientAddress(_patientId, _address);\r\n//         addPatientDateOfBirth(_patientId, _dateOfBirth);\r\n//         addPatientAllergies(_patientId, allergies);\r\n//     }\r\n\r\n\r\n}",
+  "sourcePath": "C:/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/Medical.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/Medical.sol",
+    "exportedSymbols": {
+      "Medical": [
+        132
+      ]
+    },
+    "id": 133,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 131,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "137:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 132,
+        "linearizedBaseContracts": [
+          132
+        ],
+        "name": "Medical",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 133,
+        "src": "163:2982:1"
+      }
+    ],
+    "src": "137:3008:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/Medical.sol",
+    "exportedSymbols": {
+      "Medical": [
+        132
+      ]
+    },
+    "id": 133,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 131,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "137:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 132,
+        "linearizedBaseContracts": [
+          132
+        ],
+        "name": "Medical",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 133,
+        "src": "163:2982:1"
+      }
+    ],
+    "src": "137:3008:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2022-05-21T17:20:04.099Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

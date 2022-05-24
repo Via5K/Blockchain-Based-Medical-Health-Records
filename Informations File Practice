@@ -1,0 +1,110 @@
+// So to call the contracts from another files.,
+
+
+// 1. import the contract first
+// 2. Need to specify the address of th econtract that we are going to use.
+// 3. Then we can call th econtract like tihs:
+
+// //We call the contract by, contractname varibalename = contractname(contract's address);
+// //after that we will call the functions using. variablename.funcitonName
+
+
+// pragma solidity >=0.7.0 <0.9.0;
+// import './patients.sol';
+// import './doctors.sol';
+
+
+// contract medical{
+//     address contractPatient;
+//     address contractDoctor;
+
+//     function setAddresses(address _patientsAddress, address _doctorsAddress) external{
+//         contractDoctor = _doctorsAddress;
+//         contractPatient = _patientsAddress;
+//     }
+
+//     struct patientsData{
+//         string patientName;
+//         string doctorName;
+//     }
+
+//     function callTheFunctions(string memory _patientId, string memory _doctorId, string memory _name, string memory _docName) external returns(patientsData memory){
+//         //define the contracts instance varibales.
+//         //contractName varibaleName = contractName (address of the contract);
+
+//         patients patient_ = patients(contractPatient);
+//         doctors doctor_ = doctors(contractDoctor);
+
+//         //now we can call the functions of the contracts....
+//         //example...
+//         //store the name of the patient in the patientsContract
+//         patient_.addPatientName(_patientId, _name);
+//         patientsData.patientName = patient_.getPatientName(_patientId);
+//         //Now storing the doctors name and getting it.
+//         doctor_.addDoctorName(_doctorId, _docName);
+//         patientsData.doctorName = patient_.getDoctorName(_doctorId);
+//         return patientsData;
+//     }
+// }
+
+
+// Now we are using the whole contract, but if we want to use only a few functions, then we can use interface.
+// We just need to go to the contract whose functions we need to use, create a interface like this:
+
+// contract InterfaceB{
+//     //define the functions only.
+//     function name() public view returns(string memory);
+//     function age() public view returns(string memory);
+// }
+
+
+
+
+// Working with structs
+
+// https://www.youtube.com/watch?v=UkdU0cuAp9U
+
+
+// 1. create a struct..
+// 2. when using struct inside the function, first create its instance.
+// 3. Instance can be created like this: //structureName memory variableName = structureName(pass the parameters);
+
+
+// Sample Code:
+
+
+
+// contract myContract{
+//     struct patientsData {
+//         string patientName;
+//         string doctorName;
+//     }
+
+//     string pname;
+//     string dname;
+
+//     function callTheFunctions(string memory _patientId, string memory _doctorId, string memory _name, string memory _docName) external returns(patientsData memory){
+//         //define the contracts instance varibales.
+//         //contractName varibaleName = contractName (address of the contract);
+//         patientsData memory patientsData1;
+//         Patients patient_ = Patients(contractPatient);
+//         Doctors doctor_ = Doctors(contractDoctor);
+
+//         //now we can call the functions of the contracts....
+//         //example...
+//         //store the name of the patient in the patientsContract
+//         patient_.addPatientName(_patientId, _name);
+//         pname = patient_.getPatientName(_patientId);
+//         patientsData1.patientName = patient_.getPatientName(_patientId);
+//         // patientsData.patientName=pname;
+//         // return currentPatientName;
+//         // return pname;
+//         //Now storing the doctors name and getting it.
+//         doctor_.addDoctorName(_doctorId, _docName);
+//         patientsData1.doctorName = doctor_.getDoctorName(_doctorId);
+//         dname = doctor_.getDoctorName(_doctorId);
+//         return patientsData1;
+
+//     }
+
+// }
