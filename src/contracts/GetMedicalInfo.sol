@@ -3,9 +3,10 @@
 pragma solidity >=0.7.0 <0.9.0;
 import './Patients.sol';
 import './Doctors.sol';
+import './AccessControl.sol';
 //all the information will be sent here to get the Information from the blockchain..
 
-contract GetMedicalInfo{
+contract GetMedicalInfo is AccessControl{
 
     //Creating the Contracts instances of Doctor and Patient.
     Patients patient_;
@@ -24,7 +25,8 @@ contract GetMedicalInfo{
     ****/
 
     //The information in Patient Contract is get using: patientContractInstance.FunctionName(Parameters);
-    function getMedicalInfoPatient(string memory _patientId) public view {
+    //the address in OnlyDoctor will be sent from the metamsk....
+    function getMedicalInfoPatient(string memory _patientId) public view onlyDoctor(msg.sender){
         patient_.getPatientName(_patientId);
         patient_.getPatientMobileNumber(_patientId);
         patient_.getPatientGender(_patientId);
@@ -41,7 +43,7 @@ contract GetMedicalInfo{
 
     //The information in Doctor Contract is retrieved using: doctorContractInstance.FunctionName(Parameters);
     
-    function getMedicalInfoDoctor(string memory _doctorId) public view{
+    function getMedicalInfoDoctor(string memory _doctorId) public view onlyDoctor(msg.sender){
         doctor_.getDoctorName(_doctorId);
         doctor_.getDoctorSpeciality(_doctorId);
         doctor_.getDoctorHospital(_doctorId);

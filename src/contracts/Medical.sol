@@ -21,6 +21,8 @@ contract Medical is Patients{
     //called once only and stores the address of the deployer.
     constructor(){
         owner = msg.sender;
+        authorised.push(owner);
+        authorisedMap[owner]=true;
     }
 
     //checks for the owner

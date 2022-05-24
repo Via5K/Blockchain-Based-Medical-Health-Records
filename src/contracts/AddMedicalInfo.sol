@@ -1,14 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0
-
-
-
 // All the information will be sent here to add the information in the blockchain.
 
 pragma solidity >=0.7.0;
 import './Patients.sol';
 import './Doctors.sol';
+import './AccessControl.sol';
 
-contract AddMedicalInfo{
+contract AddMedicalInfo is AccessControl{
 
     //Creating the Contracts instances of Doctor and Patient.
     Patients patient_;
@@ -33,7 +31,7 @@ contract AddMedicalInfo{
     ****/
 
     //The information in Patient Contract is updated using: patientContractInstance.FunctionName(Parameters);
-    function addMedicalInfoPatient(string memory _patientName, string memory _patientId, string memory _patientMobileNumber, string memory _patientGender, string memory _patientAddress, string memory _patientDateOfBirth, string memory _allergiesKnown) public {
+    function addMedicalInfoPatient(string memory _patientName, string memory _patientId, string memory _patientMobileNumber, string memory _patientGender, string memory _patientAddress, string memory _patientDateOfBirth, string memory _allergiesKnown) public onlyDoctor(msg.sender){
         patient_.addPatientName(_patientId, _patientName);
         patient_.addPatientMobileNumber(_patientId, _patientMobileNumber);
         patient_.addPatientGender(_patientId, _patientGender);
@@ -54,7 +52,7 @@ contract AddMedicalInfo{
 
     //The information in Doctor Contract is updated using: doctorContractInstance.FunctionName(Parameters);
     
-    function addMedicalInfoDoctor(string memory _doctorName, string memory _doctorId, string memory _doctorSpeciality, string memory _doctorHospital, string memory _doctorGender) public{
+    function addMedicalInfoDoctor(string memory _doctorName, string memory _doctorId, string memory _doctorSpeciality, string memory _doctorHospital, string memory _doctorGender) public onlyDoctor(msg.sender){
         doctor_.addDoctorName(_doctorId, _doctorName);
         doctor_.addDoctorSpeciality(_doctorId, _doctorSpeciality);
         doctor_.addDoctorHospital(_doctorId, _doctorHospital);
