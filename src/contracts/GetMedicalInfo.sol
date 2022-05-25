@@ -4,6 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 import './Patients.sol';
 import './Doctors.sol';
 import './AccessControl.sol';
+import './Records.sol';
 //all the information will be sent here to get the Information from the blockchain..
 
 contract GetMedicalInfo is AccessControl{
@@ -11,11 +12,13 @@ contract GetMedicalInfo is AccessControl{
     //Creating the Contracts instances of Doctor and Patient.
     Patients patient_;
     Doctors doctor_;
-    
-    constructor(address _patientsContractAddress, address _doctorsContractAddress) {
+    Records record_;
+
+    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) {
         //updating the contracts instances with the addresses of the constructor
         patient_ = Patients(_patientsContractAddress);
         doctor_ = Doctors(_doctorsContractAddress);
+        record_ = Records(_recordsContractAddress);
     }
 
     /****
@@ -49,4 +52,19 @@ contract GetMedicalInfo is AccessControl{
         doctor_.getDoctorHospital(_doctorId);
         doctor_.getDoctorGender(_doctorId);
     }
+
+    /****
+        Function getMedicalRecords gets the information of the Patients Medical record from the Records contract.
+        parameters passed are:
+        string patientId;
+    ****/
+    
+    function getMedicalRecords(string memory _patientId) public view onlyDoctor(msg.sender){
+        record_.getLastUpdated(_patientId);
+        record_.getCurrentMedicalDosage(_patientId);
+        record_.getUpdatedBy(_patientId);
+        record_.getCurrentDiagnosis(_patientId);
+        record_.getPDFreport(_patientId);
+    }
+
 }

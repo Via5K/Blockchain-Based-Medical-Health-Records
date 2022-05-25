@@ -5,17 +5,19 @@ pragma solidity >=0.7.0;
 import './Patients.sol';
 import './Doctors.sol';
 import './AccessControl.sol';
+import './Records.sol';
 
 contract AddMedicalInfo is AccessControl{
 
     //Creating the Contracts instances of Doctor and Patient.
     Patients patient_;
     Doctors doctor_;
-    
-    constructor(address _patientsContractAddress, address _doctorsContractAddress) {
+    Records record_;
+    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) {
         //updating the contracts instances with the addresses of the constructor
         patient_ = Patients(_patientsContractAddress);
         doctor_ = Doctors(_doctorsContractAddress);
+        record_ = Records(_recordsContractAddress);
     }
 
     /****
@@ -59,10 +61,26 @@ contract AddMedicalInfo is AccessControl{
         doctor_.addDoctorGender(_doctorId, _doctorGender);
     }
 
+    /****
+        Function addMedicalRecords Updates the information of the Patients Medical record in the Records contract.
+        parameters passed are:
+        string patientId;
+        string lastUpdated;
+        string currentMedicalDosage;
+        string updatedBy; //doctors id
+        string currentDiagnosis;
+        string PDFreport;
+    ****/
+    
+    function addMedicalRecords(string memory _patientId, string memory _lastUpdated, string memory _currentMedicalDosage, string memory _updatedBy, string memory _currentDiagnosis, string memory _PDFreport) public onlyDoctor(msg.sender){
+        record_.addLastUpdated(_patientId, _lastUpdated);
+        record_.addCurrentMedicalDosage(_patientId, _currentMedicalDosage);
+        record_.addUpdatedBy(_patientId, _updatedBy);
+        record_.addCurrentDiagnosis(_patientId, _currentDiagnosis);
+        record_.addPDFreport(_patientId, _PDFreport);
+    }
+
 }
-
-
-
 
 
 

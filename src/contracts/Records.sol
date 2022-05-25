@@ -8,7 +8,7 @@ contract Records{
         string currentMedicalDosage;
         string updatedBy; //doctors id
         string currentDiagnosis;
-        string PDFreport;
+        string[] PDFreport;
     }
 
     mapping(string=>medicalRecord)patientAndRecord;
@@ -101,7 +101,7 @@ contract Records{
     ****/
 
     function addPDFreport(string memory _patientId, string memory _PDFreport) public {
-        patientAndRecord[_patientId].PDFreport = _PDFreport;
+        patientAndRecord[_patientId].PDFreport.push(_PDFreport);
     }
 
     /****
@@ -111,7 +111,7 @@ contract Records{
     ****/
     
     function getPDFreport(string memory _patientId) public view returns(string memory){
-        return patientAndRecord[_patientId].PDFreport;
+        return patientAndRecord[_patientId].PDFreport[patientAndRecord[_patientId].PDFreport.length-1];
     }
 
 }

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
+pragma solidity >=0.7.0;
 contract AccessControl{
     //Owner, the deployer adds the doctors into the database....
     address public owner;
