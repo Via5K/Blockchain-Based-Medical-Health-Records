@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 // All the information will be sent here to add the information in the blockchain.
 
-// pragma solidity >=0.7.0;
-pragma solidity >=0.5.1;
+pragma solidity >=0.7.0;
 import './Patients.sol';
 import './Doctors.sol';
 import './AccessControl.sol';
@@ -14,7 +13,7 @@ contract AddMedicalInfo is AccessControl{
     Patients patient_;
     Doctors doctor_;
     Records record_;
-    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) public {
+    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) {
         //updating the contracts instances with the addresses of the constructor
         patient_ = Patients(_patientsContractAddress);
         doctor_ = Doctors(_doctorsContractAddress);

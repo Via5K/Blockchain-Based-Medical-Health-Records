@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-// pragma solidity >=0.7.0 <0.9.0;
-pragma solidity >=0.5.1;
+pragma solidity >=0.7.0 <0.9.0;
 pragma experimental ABIEncoderV2;
 
 contract Patients{
