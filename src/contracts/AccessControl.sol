@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0;
+// pragma solidity >=0.7.0;
+pragma solidity 0.5.17;
 contract AccessControl{
     //Owner, the deployer adds the doctors into the database....
     address public owner;
@@ -14,7 +15,7 @@ contract AccessControl{
     address[] authorisedDoctors;
     mapping (address=>bool)authorisedMap; //Created for easy check
 
-    constructor() {
+    constructor() public{
         owner = msg.sender;
         authorisedDoctors.push(owner);
         authorisedMap[owner]=true;

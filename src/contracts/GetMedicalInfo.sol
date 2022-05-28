@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+// pragma solidity >=0.7.0 <0.9.0;
+pragma solidity 0.5.17;
 import './Patients.sol';
 import './Doctors.sol';
 import './AccessControl.sol';
@@ -14,7 +15,8 @@ contract GetMedicalInfo is AccessControl{
     Doctors doctor_;
     Records record_;
 
-    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) {
+    // constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) public {
+    constructor(Patients _patientsContractAddress, Doctors _doctorsContractAddress, Records _recordsContractAddress) public {
         //updating the contracts instances with the addresses of the constructor
         patient_ = Patients(_patientsContractAddress);
         doctor_ = Doctors(_doctorsContractAddress);
@@ -29,13 +31,16 @@ contract GetMedicalInfo is AccessControl{
 
     //The information in Patient Contract is get using: patientContractInstance.FunctionName(Parameters);
     //the address in OnlyDoctor will be sent from the metamsk....
-    function getMedicalInfoPatient(string memory _patientId) public view onlyDoctor(msg.sender){
-        patient_.getPatientName(_patientId);
-        patient_.getPatientMobileNumber(_patientId);
-        patient_.getPatientGender(_patientId);
-        patient_.getPatientAddress(_patientId);
-        patient_.getPatientDateOfBirth(_patientId);
-        patient_.getPatientAllergies(_patientId);
+    // 
+    function getMedicalInfoPatient(string memory _patientId) public view onlyDoctor(msg.sender) returns(string memory, string memory, string memory, string memory, string memory, string memory){
+        return(
+        patient_.getPatientName(_patientId),
+        patient_.getPatientMobileNumber(_patientId),
+        patient_.getPatientGender(_patientId),
+        patient_.getPatientAddress(_patientId),
+        patient_.getPatientDateOfBirth(_patientId),
+        patient_.getPatientAllergies(_patientId)
+        );
     } 
 
     /****
@@ -46,11 +51,12 @@ contract GetMedicalInfo is AccessControl{
 
     //The information in Doctor Contract is retrieved using: doctorContractInstance.FunctionName(Parameters);
     
-    function getMedicalInfoDoctor(string memory _doctorId) public view onlyDoctor(msg.sender){
-        doctor_.getDoctorName(_doctorId);
-        doctor_.getDoctorSpeciality(_doctorId);
-        doctor_.getDoctorHospital(_doctorId);
-        doctor_.getDoctorGender(_doctorId);
+    function getMedicalInfoDoctor(string memory _doctorId) public view onlyDoctor(msg.sender) returns(string memory , string memory , string memory , string memory){
+        
+        return (doctor_.getDoctorName(_doctorId),
+        doctor_.getDoctorSpeciality(_doctorId),
+        doctor_.getDoctorHospital(_doctorId),
+        doctor_.getDoctorGender(_doctorId));
     }
 
     /****
@@ -59,12 +65,15 @@ contract GetMedicalInfo is AccessControl{
         string patientId;
     ****/
     
-    function getMedicalRecords(string memory _patientId) public view onlyDoctor(msg.sender){
-        record_.getLastUpdated(_patientId);
-        record_.getCurrentMedicalDosage(_patientId);
-        record_.getUpdatedBy(_patientId);
-        record_.getCurrentDiagnosis(_patientId);
-        record_.getPDFreport(_patientId);
+    function getMedicalRecords(string memory _patientId) public view onlyDoctor(msg.sender) returns(string memory, string memory, string memory , string memory , string memory , string memory) {
+        return(
+        record_.getLastUpdated(_patientId),
+        record_.getCurrentMedicalDosage(_patientId),
+        record_.getUpdatedBy(_patientId),
+        record_.getCurrentDiagnosis(_patientId),
+        record_.getPDFreport(_patientId),
+        record_.getAllPDFReports(_patientId)
+        );
     }
 
 }

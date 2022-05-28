@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
-pragma experimental ABIEncoderV2;
+// pragma solidity >=0.7.0 <0.9.0;
+pragma solidity 0.5.17;
+// pragma experimental ABIEncoderV2;
 
 contract Patients{
     struct patientsInfo{
@@ -11,7 +12,7 @@ contract Patients{
         string patientGender;
         string patientAddress;
         string patientDateOfBirth;
-        string[] allergiesKnown;
+        string allergiesKnown;
     }
 
     //realtionrelation between a patient id and its details...
@@ -120,15 +121,19 @@ contract Patients{
     ****/
 
     function addPatientAllergies(string memory _patientId, string memory _allergy) public{
-        patientIdInformation[_patientId].allergiesKnown.push(_allergy);
+        // patientIdInformation[_patientId].allergiesKnown.push(_allergy);
+        // patientIdInformation[_patientId].allergiesKnown = patientIdInformation[_patientId].allergiesKnown
+        
+        patientIdInformation[_patientId].allergiesKnown = string(abi.encodePacked(patientIdInformation[_patientId].patientMobileNumber,', ',_allergy));
     }
 
     /****
     This function returns the patients allergies  
     params _patientId
     ****/
-    function getPatientAllergies(string memory _patientId) public view returns(string[] memory){
+    function getPatientAllergies(string memory _patientId) public view returns(string memory){
         return patientIdInformation[_patientId].allergiesKnown;
+
     }
 
 

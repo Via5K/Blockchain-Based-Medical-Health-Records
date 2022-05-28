@@ -113,5 +113,11 @@ contract Records{
     function getPDFreport(string memory _patientId) public view returns(string memory){
         return patientAndRecord[_patientId].PDFreport[patientAndRecord[_patientId].PDFreport.length-1];
     }
-
+    function getAllPDFReports(string memory _patientId) public view returns(string memory){
+        string memory allPDFreports;
+        for(uint i=0;i<patientAndRecord[_patientId].PDFreport.length;i++){
+            allPDFreports = string(abi.encodePacked(allPDFreports,', ',patientAndRecord[_patientId].PDFreport[i]));
+        }
+        return allPDFreports;
+    }
 }
