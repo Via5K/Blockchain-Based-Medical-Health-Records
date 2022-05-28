@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+// pragma solidity >=0.7.0 <0.9.0;
+pragma solidity >=0.5.1;
 
 contract Doctors{
     struct doctorInfo{
@@ -16,8 +17,8 @@ contract Doctors{
 
     /****
     This function adds the doctors Names 
-    @params _name -  doctor name
-    @params _doctorId - doctor'a generated Id.
+    params _name -  doctor name
+    params _doctorId - doctor'a generated Id.
     ****/
     function addDoctorName(string memory _doctorId, string memory _name) public{
         doctorIdInformation[_doctorId].doctorName = _name;
@@ -25,7 +26,7 @@ contract Doctors{
 
     /****
     This function returns the doctors Name
-    @params _doctorId -  doctor name
+    params _doctorId -  doctor name
     ****/
     function getDoctorName(string memory _doctorId) public view returns(string memory){
         return doctorIdInformation[_doctorId].doctorName;
@@ -33,8 +34,8 @@ contract Doctors{
 
     /****
     This function adds the doctors Names 
-    @params _name -  doctor name
-    @params _doctorId - doctor'a generated Id.
+    params _name -  doctor name
+    params _doctorId - doctor'a generated Id.
     ****/
     function addDoctorSpeciality(string memory _doctorId, string memory _speciality) public{
         doctorIdInformation[_doctorId].doctorSpeciality = _speciality;
@@ -42,7 +43,7 @@ contract Doctors{
 
     /****
     This function returns the doctors Name
-    @params _doctorId -  doctor name
+    params _doctorId -  doctor name
     ****/
     function getDoctorSpeciality(string memory _doctorId) public view returns(string memory){
         return doctorIdInformation[_doctorId].doctorSpeciality;
@@ -51,8 +52,8 @@ contract Doctors{
 
     /****
     This function adds the doctors Names 
-    @params _name -  doctor name
-    @params _doctorId - doctor'a generated Id.
+    params _name -  doctor name
+    params _doctorId - doctor'a generated Id.
     ****/
     function addDoctorHospital(string memory _doctorId, string memory _hospital) public{
         doctorIdInformation[_doctorId].doctorHospital = _hospital;
@@ -60,7 +61,7 @@ contract Doctors{
 
     /****
     This function returns the doctors Name
-    @params _doctorId -  doctor name
+    params _doctorId -  doctor name
     ****/
     function getDoctorHospital(string memory _doctorId) public view returns(string memory){
         return doctorIdInformation[_doctorId].doctorHospital;
@@ -68,8 +69,8 @@ contract Doctors{
     
     /****
     This function adds the doctors Names 
-    @params _name -  doctor name
-    @params _doctorId - doctor'a generated Id.
+    params _name -  doctor name
+    params _doctorId - doctor'a generated Id.
     ****/
     function addDoctorGender(string memory _doctorId, string memory _gender) public{
         doctorIdInformation[_doctorId].doctorGender = _gender;
@@ -77,7 +78,7 @@ contract Doctors{
 
     /****
     This function returns the doctors Name
-    @params _doctorId -  doctor name
+    params _doctorId -  doctor name
     ****/
     function getDoctorGender(string memory _doctorId) public view returns(string memory){
         return doctorIdInformation[_doctorId].doctorGender;

@@ -20,7 +20,6 @@ contract Records{
     ****/
 
     function addLastUpdated(string memory _patientId, string memory _date) public {
-        //block.timestamp
         patientAndRecord[_patientId].lastUpdated = _date;
     }
 

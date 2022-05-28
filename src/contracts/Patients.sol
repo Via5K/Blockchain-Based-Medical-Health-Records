@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+// pragma solidity >=0.7.0 <0.9.0;
+pragma solidity >=0.5.1;
+pragma experimental ABIEncoderV2;
 
 contract Patients{
     struct patientsInfo{
@@ -24,8 +26,8 @@ contract Patients{
 
     /****
     This function adds the patients Names 
-    @params _name -  patient name
-    @params _patientId - patient'a generated Id.
+    params _name -  patient name
+    params _patientId - patient'a generated Id.
     ****/
     function addPatientName(string memory _patientId, string memory _name) public{
         // patientIdInformation[_patientId].push(_name);
@@ -34,7 +36,7 @@ contract Patients{
 
     /****
     This function returns the patients Name
-    @params _patientId -  patient name
+    params _patientId -  patient name
     ****/
     function getPatientName(string memory _patientId) public view returns(string memory){
         return patientIdInformation[_patientId].patientName;
@@ -42,8 +44,8 @@ contract Patients{
 
     /****
     This function adds the patients Mobile Number
-    @params _patientMobileNumber -  patient Mobile Number
-    @params _patientId
+    params _patientMobileNumber -  patient Mobile Number
+    params _patientId
     ****/
     function addPatientMobileNumber(string memory _patientId, string memory _patientMobileNumber) public{
         patientIdInformation[_patientId].patientMobileNumber = _patientMobileNumber;
@@ -51,7 +53,7 @@ contract Patients{
 
     /****
     This function returns the patients Mobile Number
-    @params _patientId
+    params _patientId
     ****/
     function getPatientMobileNumber(string memory _patientId) public view returns(string memory){
         return patientIdInformation[_patientId].patientMobileNumber;
@@ -60,8 +62,8 @@ contract Patients{
 
     /****
     This function adds the Gender of the Patient
-    @params _patientGender -  patient Mobile Number
-    @params _patientId
+    params _patientGender -  patient Mobile Number
+    params _patientId
     ****/
     function addPatientGender(string memory _patientId, string memory _patientGender) public{
         patientIdInformation[_patientId].patientGender = _patientGender;
@@ -69,7 +71,7 @@ contract Patients{
 
     /****
     This function returns the patients Gender
-    @params _patientId
+    params _patientId
     ****/
     function getPatientGender(string memory _patientId) public view returns(string memory){
         return patientIdInformation[_patientId].patientGender;
@@ -78,8 +80,8 @@ contract Patients{
 
     /****
     This function adds the patients Address
-    @params _patientAddress -  patient Address
-    @params _patientId
+    params _patientAddress -  patient Address
+    params _patientId
     ****/
     function addPatientAddress(string memory _patientId, string memory _patientAddress) public{
         patientIdInformation[_patientId].patientAddress = _patientAddress;
@@ -87,7 +89,7 @@ contract Patients{
 
     /****
     This function returns the patients Mobile Number
-    @params _patientId
+    params _patientId
     ****/
     function getPatientAddress(string memory _patientId) public view returns(string memory){
         return patientIdInformation[_patientId].patientAddress;
@@ -96,8 +98,8 @@ contract Patients{
 
     /****
     This function adds the patients date of birth
-    @params _patientMobileNumber -  patient patient date of birth
-    @params _patientId
+    params _patientMobileNumber -  patient patient date of birth
+    params _patientId
     ****/
     function addPatientDateOfBirth(string memory _patientId, string memory _patientDateOfBirth) public{
         patientIdInformation[_patientId].patientDateOfBirth = _patientDateOfBirth;
@@ -105,7 +107,7 @@ contract Patients{
 
     /****
     This function returns the patients date of birth
-    @params _patientId
+    params _patientId
     ****/
     function getPatientDateOfBirth(string memory _patientId) public view returns(string memory){
         return patientIdInformation[_patientId].patientDateOfBirth;
@@ -114,8 +116,8 @@ contract Patients{
 
     /****
     This function adds the patients allergies 
-    @params _allergy - 
-    @params _patientId
+    params _allergy - 
+    params _patientId
     ****/
 
     function addPatientAllergies(string memory _patientId, string memory _allergy) public{
@@ -124,7 +126,7 @@ contract Patients{
 
     /****
     This function returns the patients allergies  
-    @params _patientId
+    params _patientId
     ****/
     function getPatientAllergies(string memory _patientId) public view returns(string[] memory){
         return patientIdInformation[_patientId].allergiesKnown;

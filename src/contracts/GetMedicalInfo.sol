@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+// pragma solidity >=0.7.0 <0.9.0;
+pragma solidity >=0.5.1;
 import './Patients.sol';
 import './Doctors.sol';
 import './AccessControl.sol';
@@ -14,7 +15,7 @@ contract GetMedicalInfo is AccessControl{
     Doctors doctor_;
     Records record_;
 
-    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) {
+    constructor(address _patientsContractAddress, address _doctorsContractAddress, address _recordsContractAddress) public{
         //updating the contracts instances with the addresses of the constructor
         patient_ = Patients(_patientsContractAddress);
         doctor_ = Doctors(_doctorsContractAddress);
