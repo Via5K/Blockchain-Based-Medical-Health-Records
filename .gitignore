@@ -1,4 +1,3 @@
-.gitignore
 images
 node_modules/
 Informations File Practice
@@ -7,3 +6,4 @@ index.html
 Doctor.html
 Record.html
 stylesheet.css
+.gitignore
