@@ -39,22 +39,38 @@
       "stateMutability": "nonpayable",
       "type": "function",
       "signature": "0x25da1c77"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_doctorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "removeAuthorisedDoctor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x42d68838"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060016000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506001600260008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055506102ce806101606000396000f3fe608060405234801561001057600080fd5b5060043610610053576000357c01000000000000000000000000000000000000000000000000000000009004806325da1c77146100585780638da5cb5b1461009c575b600080fd5b61009a6004803603602081101561006e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100e6565b005b6100a461024c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461018b576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001806102726028913960400191505060405180910390fd5b60018190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fe4f7070732c20596f752077696c6c206e65656420746f20636f6e7461637420746865206f776e6572a265627a7a723158202073cd4c181b2638027c3cf4d6615920971dc669c439cd62354de743b52f01f164736f6c63430005110032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610053576000357c01000000000000000000000000000000000000000000000000000000009004806325da1c77146100585780638da5cb5b1461009c575b600080fd5b61009a6004803603602081101561006e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100e6565b005b6100a461024c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461018b576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001806102726028913960400191505060405180910390fd5b60018190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fe4f7070732c20596f752077696c6c206e65656420746f20636f6e7461637420746865206f776e6572a265627a7a723158202073cd4c181b2638027c3cf4d6615920971dc669c439cd62354de743b52f01f164736f6c63430005110032",
-  "sourceMap": "93:1746:0:-;;;507:133;8:9:-1;5:2;;;30:1;27;20:12;5:2;507:133:0;546:10;538:5;;:18;;;;;;;;;;;;;;;;;;567:17;590:5;;;;;;;;;;;567:29;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;567:29:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;628:4;607:13;:20;621:5;;;;;;;;;;;607:20;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;93:1746;;;;;;",
-  "deployedSourceMap": "93:1746:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:1746:0;;;;;;;;;;;;;;;;;;;;;;;;;1660:172;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1660:172:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;188:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1660:172;854:5;;;;;;;;;;;842:17;;:10;:17;;;834:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1739:17;1762:14;1739:38;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1739:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1820:4;1788:13;:29;1802:14;1788:29;;;;;;;;;;;;;;;;:36;;;;;;;;;;;;;;;;;;1660:172;:::o;188:20::-;;;;;;;;;;;;;:::o",
-  "source": "// SPDX-License-Identifier: GPL-3.0\r\n\r\n// pragma solidity >=0.7.0;\r\npragma solidity 0.5.17;\r\ncontract AccessControl{\r\n    //Owner, the deployer adds the doctors into the database....\r\n    address public owner;\r\n\r\n    /**** \r\n    1. Stores the doctors addresses.\r\n    2. Considered as a database of the Doctors address\r\n    Address here stored are added by the contract owner only.\r\n    ****/\r\n    \r\n    address[] authorisedDoctors;\r\n    mapping (address=>bool)authorisedMap; //Created for easy check\r\n\r\n    constructor() public{\r\n        owner = msg.sender;\r\n        authorisedDoctors.push(owner);\r\n        authorisedMap[owner]=true;\r\n    }\r\n    \r\n    /**** \r\n    Checks if the caller of the contract is owner or not?\r\n    If yes, then only proceed to the Function whatever you are doing.\r\n    ****/\r\n\r\n    modifier isOwner{\r\n        require(msg.sender==owner,'Opps, You will need to contact the owner');\r\n        _;\r\n    }\r\n\r\n    /**** \r\n    Checks if the caller of the contract is Doctor or Patient?\r\n    If yes, then only proceed to the Function whatever you are doing.\r\n    ****/\r\n    //The address will be sent from metamask.\r\n    modifier onlyDoctor(address _patientAddress){\r\n        //for now i am removing this or COndition. \r\n        // || msg.sender==_patientAddress \r\n        require(authorisedMap[msg.sender]==true ,'You are Not authorised to Access the data');\r\n        _;\r\n    }\r\n\r\n    \r\n\r\n    /**** \r\n    Updates the doctorsAddress in the database of authorised doctors.\r\n    Along with this, check for the isOwner, if the caller is owner, then only it is allowed to Add the address.\r\n    Parameter passed -\r\n    _doctorAddress\r\n    ****/\r\n    function addAuthorisedDoctor(address _doctorAddress) isOwner public {\r\n        authorisedDoctors.push(_doctorAddress);\r\n        authorisedMap[_doctorAddress] = true;\r\n    }    \r\n}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060018060008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055506103b6806100d86000396000f3fe608060405234801561001057600080fd5b506004361061005e576000357c01000000000000000000000000000000000000000000000000000000009004806325da1c771461006357806342d68838146100a75780638da5cb5b146100eb575b600080fd5b6100a56004803603602081101561007957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610135565b005b6100e9600480360360208110156100bd57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610234565b005b6100f3610334565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101da576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602881526020018061035a6028913960400191505060405180910390fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602881526020018061035a6028913960400191505060405180910390fd5b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fe4f7070732c20596f752077696c6c206e65656420746f20636f6e7461637420746865206f776e6572a265627a7a72315820b51455788ea119652bed20c61d39bc14743372b5fc4281678b70d1fa2f7b879a64736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061005e576000357c01000000000000000000000000000000000000000000000000000000009004806325da1c771461006357806342d68838146100a75780638da5cb5b146100eb575b600080fd5b6100a56004803603602081101561007957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610135565b005b6100e9600480360360208110156100bd57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610234565b005b6100f3610334565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101da576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602881526020018061035a6028913960400191505060405180910390fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602881526020018061035a6028913960400191505060405180910390fd5b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff02191690831515021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fe4f7070732c20596f752077696c6c206e65656420746f20636f6e7461637420746865206f776e6572a265627a7a72315820b51455788ea119652bed20c61d39bc14743372b5fc4281678b70d1fa2f7b879a64736f6c63430005110032",
+  "sourceMap": "93:2069:0:-;;;510:136;8:9:-1;5:2;;;30:1;27;20:12;5:2;510:136:0;549:10;541:5;;:18;;;;;;;;;;;;;;;;;;634:4;613:13;:20;627:5;;;;;;;;;;;613:20;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;93:2069;;;;;;",
+  "deployedSourceMap": "93:2069:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:2069:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1666:175;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1666:175:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;2033:126;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2033:126:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;188:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1666:175;860:5;;;;;;;;;;;848:17;;:10;:17;;;840:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1829:4;1797:13;:29;1811:14;1797:29;;;;;;;;;;;;;;;;:36;;;;;;;;;;;;;;;;;;1666:175;:::o;2033:126::-;860:5;;;;;;;;;;;848:17;;:10;:17;;;840:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2146:5;2114:13;:29;2128:14;2114:29;;;;;;;;;;;;;;;;:37;;;;;;;;;;;;;;;;;;2033:126;:::o;188:20::-;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\r\n\r\n// pragma solidity >=0.7.0;\r\npragma solidity 0.5.17;\r\ncontract AccessControl{\r\n    //Owner, the deployer adds the doctors into the database....\r\n    address public owner;\r\n\r\n    /**** \r\n    1. Stores the doctors addresses.\r\n    2. Considered as a database of the Doctors address\r\n    Address here stored are added by the contract owner only.\r\n    ****/\r\n    \r\n    // address[] authorisedDoctors;\r\n    mapping (address=>bool)authorisedMap; //Created for easy check\r\n\r\n    constructor() public{\r\n        owner = msg.sender;\r\n        // authorisedDoctors.push(owner);\r\n        authorisedMap[owner]=true;\r\n    }\r\n    \r\n    /**** \r\n    Checks if the caller of the contract is owner or not?\r\n    If yes, then only proceed to the Function whatever you are doing.\r\n    ****/\r\n\r\n    modifier isOwner{\r\n        require(msg.sender==owner,'Opps, You will need to contact the owner');\r\n        _;\r\n    }\r\n\r\n    /**** \r\n    Checks if the caller of the contract is Doctor or Patient?\r\n    If yes, then only proceed to the Function whatever you are doing.\r\n    ****/\r\n    //The address will be sent from metamask.\r\n    modifier onlyDoctor(address _patientAddress){\r\n        //for now i am removing this or COndition. \r\n        // || msg.sender==_patientAddress \r\n        require(authorisedMap[msg.sender]==true ,'You are Not authorised to Access the data');\r\n        _;\r\n    }\r\n\r\n    \r\n\r\n    /**** \r\n    Updates the doctorsAddress in the database of authorised doctors.\r\n    Along with this, check for the isOwner, if the caller is owner, then only it is allowed to Add the address.\r\n    Parameter passed -\r\n    _doctorAddress\r\n    ****/\r\n    function addAuthorisedDoctor(address _doctorAddress) isOwner public {\r\n        // authorisedDoctors.push(_doctorAddress);\r\n        authorisedMap[_doctorAddress] = true;\r\n    }    \r\n    /*****\r\n    RemoveAuthorisedDoctor - Removes the permission of the doctor that was previously assigned the permissions.\r\n    Parameter Passes - \r\n    _doctorAddress\r\n    *****/\r\n    function removeAuthorisedDoctor(address _doctorAddress) isOwner public{\r\n        authorisedMap[_doctorAddress] = false;\r\n    }\r\n}",
   "sourcePath": "C:\\Users\\Neeraj\\Desktop\\Meidcal Health Records\\src\\contracts\\AccessControl.sol",
   "ast": {
     "absolutePath": "/C/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/AccessControl.sol",
     "exportedSymbols": {
       "AccessControl": [
-        80
+        79
       ]
     },
-    "id": 81,
+    "id": 80,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -73,9 +89,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 80,
+        "id": 79,
         "linearizedBaseContracts": [
-          80
+          79
         ],
         "name": "AccessControl",
         "nodeType": "ContractDefinition",
@@ -85,7 +101,7 @@
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 80,
+            "scope": 79,
             "src": "188:20:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -109,48 +125,11 @@
           },
           {
             "constant": false,
-            "id": 6,
-            "name": "authorisedDoctors",
-            "nodeType": "VariableDeclaration",
-            "scope": 80,
-            "src": "403:27:0",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_address_$dyn_storage",
-              "typeString": "address[]"
-            },
-            "typeName": {
-              "baseType": {
-                "id": 4,
-                "name": "address",
-                "nodeType": "ElementaryTypeName",
-                "src": "403:7:0",
-                "stateMutability": "nonpayable",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_address",
-                  "typeString": "address"
-                }
-              },
-              "id": 5,
-              "length": null,
-              "nodeType": "ArrayTypeName",
-              "src": "403:9:0",
-              "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
-                "typeString": "address[]"
-              }
-            },
-            "value": null,
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 10,
+            "id": 7,
             "name": "authorisedMap",
             "nodeType": "VariableDeclaration",
-            "scope": 80,
-            "src": "437:36:0",
+            "scope": 79,
+            "src": "440:36:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -158,28 +137,28 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 9,
+              "id": 6,
               "keyType": {
-                "id": 7,
+                "id": 4,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "446:7:0",
+                "src": "449:7:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "437:23:0",
+              "src": "440:23:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 8,
+                "id": 5,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
-                "src": "455:4:0",
+                "src": "458:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_bool",
                   "typeString": "bool"
@@ -191,26 +170,26 @@
           },
           {
             "body": {
-              "id": 30,
+              "id": 21,
               "nodeType": "Block",
-              "src": "527:113:0",
+              "src": "530:116:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 16,
+                    "id": 13,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 13,
+                      "id": 10,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
-                      "src": "538:5:0",
+                      "src": "541:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -222,18 +201,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 14,
+                        "id": 11,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1050,
-                        "src": "546:3:0",
+                        "referencedDeclaration": 1049,
+                        "src": "549:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 15,
+                      "id": 12,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -241,96 +220,26 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "546:10:0",
+                      "src": "549:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "538:18:0",
+                    "src": "541:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 17,
+                  "id": 14,
                   "nodeType": "ExpressionStatement",
-                  "src": "538:18:0"
+                  "src": "541:18:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 21,
-                        "name": "owner",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 3,
-                        "src": "590:5:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 18,
-                        "name": "authorisedDoctors",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 6,
-                        "src": "567:17:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
-                          "typeString": "address[] storage ref"
-                        }
-                      },
-                      "id": 20,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "567:22:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
-                        "typeString": "function (address) returns (uint256)"
-                      }
-                    },
-                    "id": 22,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "567:29:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 23,
-                  "nodeType": "ExpressionStatement",
-                  "src": "567:29:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 28,
+                    "id": 19,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -339,26 +248,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 24,
+                        "id": 15,
                         "name": "authorisedMap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "607:13:0",
+                        "referencedDeclaration": 7,
+                        "src": "613:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 26,
+                      "id": 17,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 25,
+                        "id": 16,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3,
-                        "src": "621:5:0",
+                        "src": "627:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -369,7 +278,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "607:20:0",
+                      "src": "613:20:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -380,14 +289,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 27,
+                      "id": 18,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "628:4:0",
+                      "src": "634:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -395,48 +304,48 @@
                       },
                       "value": "true"
                     },
-                    "src": "607:25:0",
+                    "src": "613:25:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 29,
+                  "id": 20,
                   "nodeType": "ExpressionStatement",
-                  "src": "607:25:0"
+                  "src": "613:25:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 31,
+            "id": 22,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11,
+              "id": 8,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "518:2:0"
+              "src": "521:2:0"
             },
             "returnParameters": {
-              "id": 12,
+              "id": 9,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "527:0:0"
+              "src": "530:0:0"
             },
-            "scope": 80,
-            "src": "507:133:0",
+            "scope": 79,
+            "src": "510:136:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 42,
+              "id": 33,
               "nodeType": "Block",
-              "src": "823:100:0",
+              "src": "829:100:0",
               "statements": [
                 {
                   "expression": {
@@ -448,7 +357,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 37,
+                        "id": 28,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -457,18 +366,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 34,
+                            "id": 25,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1050,
-                            "src": "842:3:0",
+                            "referencedDeclaration": 1049,
+                            "src": "848:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 35,
+                          "id": 26,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -476,7 +385,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "842:10:0",
+                          "src": "848:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -486,18 +395,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 36,
+                          "id": 27,
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 3,
-                          "src": "854:5:0",
+                          "src": "860:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "842:17:0",
+                        "src": "848:17:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -506,14 +415,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4f7070732c20596f752077696c6c206e65656420746f20636f6e7461637420746865206f776e6572",
-                        "id": 38,
+                        "id": 29,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "860:42:0",
+                        "src": "866:42:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_630c89f685a375fd1fe77d40b6883c03ac764c0c0696331629e522b23bdab721",
@@ -533,21 +442,21 @@
                           "typeString": "literal_string \"Opps, You will need to contact the owner\""
                         }
                       ],
-                      "id": 33,
+                      "id": 24,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1053,
-                        1054
+                        1052,
+                        1053
                       ],
-                      "referencedDeclaration": 1054,
-                      "src": "834:7:0",
+                      "referencedDeclaration": 1053,
+                      "src": "840:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 39,
+                    "id": 30,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -555,41 +464,41 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "834:69:0",
+                    "src": "840:69:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 40,
+                  "id": 31,
                   "nodeType": "ExpressionStatement",
-                  "src": "834:69:0"
+                  "src": "840:69:0"
                 },
                 {
-                  "id": 41,
+                  "id": 32,
                   "nodeType": "PlaceholderStatement",
-                  "src": "914:1:0"
+                  "src": "920:1:0"
                 }
               ]
             },
             "documentation": "** \nChecks if the caller of the contract is owner or not?\nIf yes, then only proceed to the Function whatever you are doing.***",
-            "id": 43,
+            "id": 34,
             "name": "isOwner",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 32,
+              "id": 23,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "823:0:0"
+              "src": "829:0:0"
             },
-            "src": "807:116:0",
+            "src": "813:116:0",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 58,
+              "id": 49,
               "nodeType": "Block",
-              "src": "1180:213:0",
+              "src": "1186:213:0",
               "statements": [
                 {
                   "expression": {
@@ -601,7 +510,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 53,
+                        "id": 44,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -610,34 +519,34 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 48,
+                            "id": 39,
                             "name": "authorisedMap",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "1296:13:0",
+                            "referencedDeclaration": 7,
+                            "src": "1302:13:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                               "typeString": "mapping(address => bool)"
                             }
                           },
-                          "id": 51,
+                          "id": 42,
                           "indexExpression": {
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 49,
+                              "id": 40,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1050,
-                              "src": "1310:3:0",
+                              "referencedDeclaration": 1049,
+                              "src": "1316:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 50,
+                            "id": 41,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -645,7 +554,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "1310:10:0",
+                            "src": "1316:10:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -656,7 +565,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1296:25:0",
+                          "src": "1302:25:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -667,14 +576,14 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 52,
+                          "id": 43,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "bool",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "1323:4:0",
+                          "src": "1329:4:0",
                           "subdenomination": null,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -682,7 +591,7 @@
                           },
                           "value": "true"
                         },
-                        "src": "1296:31:0",
+                        "src": "1302:31:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -691,14 +600,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "596f7520617265204e6f7420617574686f726973656420746f20416363657373207468652064617461",
-                        "id": 54,
+                        "id": 45,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1329:43:0",
+                        "src": "1335:43:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_206d9ef7f7ed2bb181636295d381d4db1ff135d77379024add415ee3ab30dfe2",
@@ -718,21 +627,21 @@
                           "typeString": "literal_string \"You are Not authorised to Access the data\""
                         }
                       ],
-                      "id": 47,
+                      "id": 38,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1053,
-                        1054
+                        1052,
+                        1053
                       ],
-                      "referencedDeclaration": 1054,
-                      "src": "1288:7:0",
+                      "referencedDeclaration": 1053,
+                      "src": "1294:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 55,
+                    "id": 46,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -740,38 +649,38 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1288:85:0",
+                    "src": "1294:85:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 56,
+                  "id": 47,
                   "nodeType": "ExpressionStatement",
-                  "src": "1288:85:0"
+                  "src": "1294:85:0"
                 },
                 {
-                  "id": 57,
+                  "id": 48,
                   "nodeType": "PlaceholderStatement",
-                  "src": "1384:1:0"
+                  "src": "1390:1:0"
                 }
               ]
             },
             "documentation": "** \nChecks if the caller of the contract is Doctor or Patient?\nIf yes, then only proceed to the Function whatever you are doing.***",
-            "id": 59,
+            "id": 50,
             "name": "onlyDoctor",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 46,
+              "id": 37,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45,
+                  "id": 36,
                   "name": "_patientAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "1156:23:0",
+                  "scope": 50,
+                  "src": "1162:23:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -779,10 +688,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 44,
+                    "id": 35,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1156:7:0",
+                    "src": "1162:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -793,91 +702,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1155:25:0"
+              "src": "1161:25:0"
             },
-            "src": "1136:257:0",
+            "src": "1142:257:0",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 78,
+              "id": 63,
               "nodeType": "Block",
-              "src": "1728:104:0",
+              "src": "1734:107:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 69,
-                        "name": "_doctorAddress",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 61,
-                        "src": "1762:14:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 66,
-                        "name": "authorisedDoctors",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 6,
-                        "src": "1739:17:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
-                          "typeString": "address[] storage ref"
-                        }
-                      },
-                      "id": 68,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "1739:22:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
-                        "typeString": "function (address) returns (uint256)"
-                      }
-                    },
-                    "id": 70,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1739:38:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 71,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1739:38:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 76,
+                    "id": 61,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -886,26 +725,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 72,
+                        "id": 57,
                         "name": "authorisedMap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "1788:13:0",
+                        "referencedDeclaration": 7,
+                        "src": "1797:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 74,
+                      "id": 59,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 73,
+                        "id": 58,
                         "name": "_doctorAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 61,
-                        "src": "1802:14:0",
+                        "referencedDeclaration": 52,
+                        "src": "1811:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -916,7 +755,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "1788:29:0",
+                      "src": "1797:29:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -927,14 +766,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 75,
+                      "id": 60,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1820:4:0",
+                      "src": "1829:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -942,56 +781,56 @@
                       },
                       "value": "true"
                     },
-                    "src": "1788:36:0",
+                    "src": "1797:36:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 77,
+                  "id": 62,
                   "nodeType": "ExpressionStatement",
-                  "src": "1788:36:0"
+                  "src": "1797:36:0"
                 }
               ]
             },
             "documentation": "** \nUpdates the doctorsAddress in the database of authorised doctors.\nAlong with this, check for the isOwner, if the caller is owner, then only it is allowed to Add the address.\nParameter passed -\n_doctorAddress***",
-            "id": 79,
+            "id": 64,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 64,
+                "id": 55,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 63,
+                  "id": 54,
                   "name": "isOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 43,
-                  "src": "1713:7:0",
+                  "referencedDeclaration": 34,
+                  "src": "1719:7:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1713:7:0"
+                "src": "1719:7:0"
               }
             ],
             "name": "addAuthorisedDoctor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 62,
+              "id": 53,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 52,
                   "name": "_doctorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 79,
-                  "src": "1689:22:0",
+                  "scope": 64,
+                  "src": "1695:22:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -999,10 +838,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 51,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1689:7:0",
+                    "src": "1695:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1013,35 +852,194 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1688:24:0"
+              "src": "1694:24:0"
             },
             "returnParameters": {
-              "id": 65,
+              "id": 56,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1728:0:0"
+              "src": "1734:0:0"
             },
-            "scope": 80,
-            "src": "1660:172:0",
+            "scope": 79,
+            "src": "1666:175:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 77,
+              "nodeType": "Block",
+              "src": "2103:56:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 75,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "authorisedMap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "2114:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 73,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "_doctorAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "2128:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2114:29:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2146:5:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "2114:37:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 76,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2114:37:0"
+                }
+              ]
+            },
+            "documentation": "***\nRemoveAuthorisedDoctor - Removes the permission of the doctor that was previously assigned the permissions.\nParameter Passes - \n_doctorAddress****",
+            "id": 78,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 69,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 68,
+                  "name": "isOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 34,
+                  "src": "2089:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2089:7:0"
+              }
+            ],
+            "name": "removeAuthorisedDoctor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "_doctorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 78,
+                  "src": "2065:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2065:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2064:24:0"
+            },
+            "returnParameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2103:0:0"
+            },
+            "scope": 79,
+            "src": "2033:126:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 81,
-        "src": "93:1746:0"
+        "scope": 80,
+        "src": "93:2069:0"
       }
     ],
-    "src": "68:1771:0"
+    "src": "68:2094:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/AccessControl.sol",
     "exportedSymbols": {
       "AccessControl": [
-        80
+        79
       ]
     },
-    "id": 81,
+    "id": 80,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -1060,9 +1058,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 80,
+        "id": 79,
         "linearizedBaseContracts": [
-          80
+          79
         ],
         "name": "AccessControl",
         "nodeType": "ContractDefinition",
@@ -1072,7 +1070,7 @@
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 80,
+            "scope": 79,
             "src": "188:20:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1096,48 +1094,11 @@
           },
           {
             "constant": false,
-            "id": 6,
-            "name": "authorisedDoctors",
-            "nodeType": "VariableDeclaration",
-            "scope": 80,
-            "src": "403:27:0",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_address_$dyn_storage",
-              "typeString": "address[]"
-            },
-            "typeName": {
-              "baseType": {
-                "id": 4,
-                "name": "address",
-                "nodeType": "ElementaryTypeName",
-                "src": "403:7:0",
-                "stateMutability": "nonpayable",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_address",
-                  "typeString": "address"
-                }
-              },
-              "id": 5,
-              "length": null,
-              "nodeType": "ArrayTypeName",
-              "src": "403:9:0",
-              "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
-                "typeString": "address[]"
-              }
-            },
-            "value": null,
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 10,
+            "id": 7,
             "name": "authorisedMap",
             "nodeType": "VariableDeclaration",
-            "scope": 80,
-            "src": "437:36:0",
+            "scope": 79,
+            "src": "440:36:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1145,28 +1106,28 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 9,
+              "id": 6,
               "keyType": {
-                "id": 7,
+                "id": 4,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "446:7:0",
+                "src": "449:7:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "437:23:0",
+              "src": "440:23:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 8,
+                "id": 5,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
-                "src": "455:4:0",
+                "src": "458:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_bool",
                   "typeString": "bool"
@@ -1178,26 +1139,26 @@
           },
           {
             "body": {
-              "id": 30,
+              "id": 21,
               "nodeType": "Block",
-              "src": "527:113:0",
+              "src": "530:116:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 16,
+                    "id": 13,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 13,
+                      "id": 10,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
-                      "src": "538:5:0",
+                      "src": "541:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -1209,18 +1170,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 14,
+                        "id": 11,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1050,
-                        "src": "546:3:0",
+                        "referencedDeclaration": 1049,
+                        "src": "549:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 15,
+                      "id": 12,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1228,96 +1189,26 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "546:10:0",
+                      "src": "549:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "538:18:0",
+                    "src": "541:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 17,
+                  "id": 14,
                   "nodeType": "ExpressionStatement",
-                  "src": "538:18:0"
+                  "src": "541:18:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 21,
-                        "name": "owner",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 3,
-                        "src": "590:5:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 18,
-                        "name": "authorisedDoctors",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 6,
-                        "src": "567:17:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
-                          "typeString": "address[] storage ref"
-                        }
-                      },
-                      "id": 20,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "567:22:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
-                        "typeString": "function (address) returns (uint256)"
-                      }
-                    },
-                    "id": 22,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "567:29:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 23,
-                  "nodeType": "ExpressionStatement",
-                  "src": "567:29:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 28,
+                    "id": 19,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1326,26 +1217,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 24,
+                        "id": 15,
                         "name": "authorisedMap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "607:13:0",
+                        "referencedDeclaration": 7,
+                        "src": "613:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 26,
+                      "id": 17,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 25,
+                        "id": 16,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3,
-                        "src": "621:5:0",
+                        "src": "627:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1356,7 +1247,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "607:20:0",
+                      "src": "613:20:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1367,14 +1258,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 27,
+                      "id": 18,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "628:4:0",
+                      "src": "634:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1382,48 +1273,48 @@
                       },
                       "value": "true"
                     },
-                    "src": "607:25:0",
+                    "src": "613:25:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 29,
+                  "id": 20,
                   "nodeType": "ExpressionStatement",
-                  "src": "607:25:0"
+                  "src": "613:25:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 31,
+            "id": 22,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11,
+              "id": 8,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "518:2:0"
+              "src": "521:2:0"
             },
             "returnParameters": {
-              "id": 12,
+              "id": 9,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "527:0:0"
+              "src": "530:0:0"
             },
-            "scope": 80,
-            "src": "507:133:0",
+            "scope": 79,
+            "src": "510:136:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 42,
+              "id": 33,
               "nodeType": "Block",
-              "src": "823:100:0",
+              "src": "829:100:0",
               "statements": [
                 {
                   "expression": {
@@ -1435,7 +1326,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 37,
+                        "id": 28,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1444,18 +1335,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 34,
+                            "id": 25,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1050,
-                            "src": "842:3:0",
+                            "referencedDeclaration": 1049,
+                            "src": "848:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 35,
+                          "id": 26,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1463,7 +1354,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "842:10:0",
+                          "src": "848:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -1473,18 +1364,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 36,
+                          "id": 27,
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 3,
-                          "src": "854:5:0",
+                          "src": "860:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "842:17:0",
+                        "src": "848:17:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1493,14 +1384,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4f7070732c20596f752077696c6c206e65656420746f20636f6e7461637420746865206f776e6572",
-                        "id": 38,
+                        "id": 29,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "860:42:0",
+                        "src": "866:42:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_630c89f685a375fd1fe77d40b6883c03ac764c0c0696331629e522b23bdab721",
@@ -1520,21 +1411,21 @@
                           "typeString": "literal_string \"Opps, You will need to contact the owner\""
                         }
                       ],
-                      "id": 33,
+                      "id": 24,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1053,
-                        1054
+                        1052,
+                        1053
                       ],
-                      "referencedDeclaration": 1054,
-                      "src": "834:7:0",
+                      "referencedDeclaration": 1053,
+                      "src": "840:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 39,
+                    "id": 30,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1542,41 +1433,41 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "834:69:0",
+                    "src": "840:69:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 40,
+                  "id": 31,
                   "nodeType": "ExpressionStatement",
-                  "src": "834:69:0"
+                  "src": "840:69:0"
                 },
                 {
-                  "id": 41,
+                  "id": 32,
                   "nodeType": "PlaceholderStatement",
-                  "src": "914:1:0"
+                  "src": "920:1:0"
                 }
               ]
             },
             "documentation": "** \nChecks if the caller of the contract is owner or not?\nIf yes, then only proceed to the Function whatever you are doing.***",
-            "id": 43,
+            "id": 34,
             "name": "isOwner",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 32,
+              "id": 23,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "823:0:0"
+              "src": "829:0:0"
             },
-            "src": "807:116:0",
+            "src": "813:116:0",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 58,
+              "id": 49,
               "nodeType": "Block",
-              "src": "1180:213:0",
+              "src": "1186:213:0",
               "statements": [
                 {
                   "expression": {
@@ -1588,7 +1479,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 53,
+                        "id": 44,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1597,34 +1488,34 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 48,
+                            "id": 39,
                             "name": "authorisedMap",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "1296:13:0",
+                            "referencedDeclaration": 7,
+                            "src": "1302:13:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                               "typeString": "mapping(address => bool)"
                             }
                           },
-                          "id": 51,
+                          "id": 42,
                           "indexExpression": {
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 49,
+                              "id": 40,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1050,
-                              "src": "1310:3:0",
+                              "referencedDeclaration": 1049,
+                              "src": "1316:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 50,
+                            "id": 41,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1632,7 +1523,7 @@
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": null,
-                            "src": "1310:10:0",
+                            "src": "1316:10:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
                               "typeString": "address payable"
@@ -1643,7 +1534,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1296:25:0",
+                          "src": "1302:25:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -1654,14 +1545,14 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 52,
+                          "id": 43,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "bool",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "1323:4:0",
+                          "src": "1329:4:0",
                           "subdenomination": null,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -1669,7 +1560,7 @@
                           },
                           "value": "true"
                         },
-                        "src": "1296:31:0",
+                        "src": "1302:31:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1678,14 +1569,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "596f7520617265204e6f7420617574686f726973656420746f20416363657373207468652064617461",
-                        "id": 54,
+                        "id": 45,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1329:43:0",
+                        "src": "1335:43:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_206d9ef7f7ed2bb181636295d381d4db1ff135d77379024add415ee3ab30dfe2",
@@ -1705,21 +1596,21 @@
                           "typeString": "literal_string \"You are Not authorised to Access the data\""
                         }
                       ],
-                      "id": 47,
+                      "id": 38,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1053,
-                        1054
+                        1052,
+                        1053
                       ],
-                      "referencedDeclaration": 1054,
-                      "src": "1288:7:0",
+                      "referencedDeclaration": 1053,
+                      "src": "1294:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 55,
+                    "id": 46,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1727,38 +1618,38 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1288:85:0",
+                    "src": "1294:85:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 56,
+                  "id": 47,
                   "nodeType": "ExpressionStatement",
-                  "src": "1288:85:0"
+                  "src": "1294:85:0"
                 },
                 {
-                  "id": 57,
+                  "id": 48,
                   "nodeType": "PlaceholderStatement",
-                  "src": "1384:1:0"
+                  "src": "1390:1:0"
                 }
               ]
             },
             "documentation": "** \nChecks if the caller of the contract is Doctor or Patient?\nIf yes, then only proceed to the Function whatever you are doing.***",
-            "id": 59,
+            "id": 50,
             "name": "onlyDoctor",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 46,
+              "id": 37,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45,
+                  "id": 36,
                   "name": "_patientAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "1156:23:0",
+                  "scope": 50,
+                  "src": "1162:23:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1766,10 +1657,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 44,
+                    "id": 35,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1156:7:0",
+                    "src": "1162:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1780,91 +1671,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1155:25:0"
+              "src": "1161:25:0"
             },
-            "src": "1136:257:0",
+            "src": "1142:257:0",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 78,
+              "id": 63,
               "nodeType": "Block",
-              "src": "1728:104:0",
+              "src": "1734:107:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 69,
-                        "name": "_doctorAddress",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 61,
-                        "src": "1762:14:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 66,
-                        "name": "authorisedDoctors",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 6,
-                        "src": "1739:17:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
-                          "typeString": "address[] storage ref"
-                        }
-                      },
-                      "id": 68,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "push",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "1739:22:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
-                        "typeString": "function (address) returns (uint256)"
-                      }
-                    },
-                    "id": 70,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1739:38:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 71,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1739:38:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 76,
+                    "id": 61,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1873,26 +1694,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 72,
+                        "id": 57,
                         "name": "authorisedMap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "1788:13:0",
+                        "referencedDeclaration": 7,
+                        "src": "1797:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 74,
+                      "id": 59,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 73,
+                        "id": 58,
                         "name": "_doctorAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 61,
-                        "src": "1802:14:0",
+                        "referencedDeclaration": 52,
+                        "src": "1811:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1903,7 +1724,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "1788:29:0",
+                      "src": "1797:29:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1914,14 +1735,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 75,
+                      "id": 60,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1820:4:0",
+                      "src": "1829:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1929,56 +1750,56 @@
                       },
                       "value": "true"
                     },
-                    "src": "1788:36:0",
+                    "src": "1797:36:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 77,
+                  "id": 62,
                   "nodeType": "ExpressionStatement",
-                  "src": "1788:36:0"
+                  "src": "1797:36:0"
                 }
               ]
             },
             "documentation": "** \nUpdates the doctorsAddress in the database of authorised doctors.\nAlong with this, check for the isOwner, if the caller is owner, then only it is allowed to Add the address.\nParameter passed -\n_doctorAddress***",
-            "id": 79,
+            "id": 64,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 64,
+                "id": 55,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 63,
+                  "id": 54,
                   "name": "isOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 43,
-                  "src": "1713:7:0",
+                  "referencedDeclaration": 34,
+                  "src": "1719:7:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1713:7:0"
+                "src": "1719:7:0"
               }
             ],
             "name": "addAuthorisedDoctor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 62,
+              "id": 53,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 52,
                   "name": "_doctorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 79,
-                  "src": "1689:22:0",
+                  "scope": 64,
+                  "src": "1695:22:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1986,10 +1807,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 51,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1689:7:0",
+                    "src": "1695:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2000,26 +1821,185 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1688:24:0"
+              "src": "1694:24:0"
             },
             "returnParameters": {
-              "id": 65,
+              "id": 56,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1728:0:0"
+              "src": "1734:0:0"
             },
-            "scope": 80,
-            "src": "1660:172:0",
+            "scope": 79,
+            "src": "1666:175:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 77,
+              "nodeType": "Block",
+              "src": "2103:56:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 75,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "authorisedMap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "2114:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 73,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "_doctorAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "2128:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2114:29:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2146:5:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "2114:37:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 76,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2114:37:0"
+                }
+              ]
+            },
+            "documentation": "***\nRemoveAuthorisedDoctor - Removes the permission of the doctor that was previously assigned the permissions.\nParameter Passes - \n_doctorAddress****",
+            "id": 78,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 69,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 68,
+                  "name": "isOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 34,
+                  "src": "2089:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2089:7:0"
+              }
+            ],
+            "name": "removeAuthorisedDoctor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "_doctorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 78,
+                  "src": "2065:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2065:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2064:24:0"
+            },
+            "returnParameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2103:0:0"
+            },
+            "scope": 79,
+            "src": "2033:126:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 81,
-        "src": "93:1746:0"
+        "scope": 80,
+        "src": "93:2069:0"
       }
     ],
-    "src": "68:1771:0"
+    "src": "68:2094:0"
   },
   "compiler": {
     "name": "solc",
@@ -2029,12 +2009,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x49484bfa758d01D685024238BC287117845FbdD4",
-      "transactionHash": "0x89014b4d2305b31aad5f66b555c010ac19b7dae7737e64aed3d7bb356e834691"
+      "address": "0x7bF63828f339eD536420FD752bfdA06Cd2580B35",
+      "transactionHash": "0x9632311f2d6e55d25bb3f455c91500431df75879d7a2eca44d16989fb3aa5629"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2022-05-28T12:40:19.587Z",
+  "updatedAt": "2022-06-13T03:59:18.531Z",
   "devdoc": {
     "methods": {}
   },
@@ -2042,6 +2022,9 @@
     "methods": {
       "addAuthorisedDoctor(address)": {
         "notice": "**  Updates the doctorsAddress in the database of authorised doctors. Along with this, check for the isOwner, if the caller is owner, then only it is allowed to Add the address. Parameter passed - _doctorAddress***"
+      },
+      "removeAuthorisedDoctor(address)": {
+        "notice": "*** RemoveAuthorisedDoctor - Removes the permission of the doctor that was previously assigned the permissions. Parameter Passes -  _doctorAddress****"
       }
     }
   }

@@ -270,14 +270,14 @@
     "absolutePath": "/C/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/Patients.sol",
     "exportedSymbols": {
       "Patients": [
-        822
+        821
       ]
     },
-    "id": 823,
+    "id": 822,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 626,
+        "id": 625,
         "literals": [
           "solidity",
           "0.5",
@@ -292,23 +292,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 822,
+        "id": 821,
         "linearizedBaseContracts": [
-          822
+          821
         ],
         "name": "Patients",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Patients.patientsInfo",
-            "id": 639,
+            "id": 638,
             "members": [
               {
                 "constant": false,
-                "id": 628,
+                "id": 627,
                 "name": "patientName",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "194:18:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -317,7 +317,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 627,
+                  "id": 626,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "194:6:5",
@@ -331,10 +331,10 @@
               },
               {
                 "constant": false,
-                "id": 630,
+                "id": 629,
                 "name": "patientMobileNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "253:26:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -343,7 +343,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 629,
+                  "id": 628,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "253:6:5",
@@ -357,10 +357,10 @@
               },
               {
                 "constant": false,
-                "id": 632,
+                "id": 631,
                 "name": "patientGender",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "290:20:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -369,7 +369,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 631,
+                  "id": 630,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "290:6:5",
@@ -383,10 +383,10 @@
               },
               {
                 "constant": false,
-                "id": 634,
+                "id": 633,
                 "name": "patientAddress",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "321:21:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -395,7 +395,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 633,
+                  "id": 632,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "321:6:5",
@@ -409,10 +409,10 @@
               },
               {
                 "constant": false,
-                "id": 636,
+                "id": 635,
                 "name": "patientDateOfBirth",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "353:25:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -421,7 +421,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 635,
+                  "id": 634,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "353:6:5",
@@ -435,10 +435,10 @@
               },
               {
                 "constant": false,
-                "id": 638,
+                "id": 637,
                 "name": "allergiesKnown",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "389:21:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -447,7 +447,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 637,
+                  "id": 636,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "389:6:5",
@@ -462,27 +462,27 @@
             ],
             "name": "patientsInfo",
             "nodeType": "StructDefinition",
-            "scope": 822,
+            "scope": 821,
             "src": "164:254:5",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 643,
+            "id": 642,
             "name": "patientIdInformation",
             "nodeType": "VariableDeclaration",
-            "scope": 822,
+            "scope": 821,
             "src": "490:50:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
               "typeString": "mapping(string => struct Patients.patientsInfo)"
             },
             "typeName": {
-              "id": 642,
+              "id": 641,
               "keyType": {
-                "id": 640,
+                "id": 639,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "498:6:5",
@@ -494,18 +494,18 @@
               "nodeType": "Mapping",
               "src": "490:29:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                 "typeString": "mapping(string => struct Patients.patientsInfo)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 641,
+                "id": 640,
                 "name": "patientsInfo",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 639,
+                "referencedDeclaration": 638,
                 "src": "506:12:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_patientsInfo_$639_storage_ptr",
+                  "typeIdentifier": "t_struct$_patientsInfo_$638_storage_ptr",
                   "typeString": "struct Patients.patientsInfo"
                 }
               }
@@ -515,14 +515,14 @@
           },
           {
             "body": {
-              "id": 657,
+              "id": 656,
               "nodeType": "Block",
               "src": "907:129:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 655,
+                    "id": 654,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -533,25 +533,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 650,
+                          "id": 649,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "976:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 652,
+                        "id": 651,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 651,
+                          "id": 650,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 645,
+                          "referencedDeclaration": 644,
                           "src": "997:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -565,18 +565,18 @@
                         "nodeType": "IndexAccess",
                         "src": "976:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 653,
+                      "id": 652,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientName",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 628,
+                      "referencedDeclaration": 627,
                       "src": "976:44:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -587,11 +587,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 654,
+                      "id": 653,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 646,
                       "src": "1023:5:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -604,29 +604,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 656,
+                  "id": 655,
                   "nodeType": "ExpressionStatement",
                   "src": "976:52:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients Names \nparams _name -  patient name\nparams _patientId - patient'a generated Id.***",
-            "id": 658,
+            "id": 657,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientName",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 648,
+              "id": 647,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 645,
+                  "id": 644,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 658,
+                  "scope": 657,
                   "src": "854:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -635,7 +635,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 644,
+                    "id": 643,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "854:6:5",
@@ -649,10 +649,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 647,
+                  "id": 646,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 658,
+                  "scope": 657,
                   "src": "880:19:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -661,7 +661,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 646,
+                    "id": 645,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "880:6:5",
@@ -677,12 +677,12 @@
               "src": "853:47:5"
             },
             "returnParameters": {
-              "id": 649,
+              "id": 648,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "907:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "830:206:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -690,7 +690,7 @@
           },
           {
             "body": {
-              "id": 670,
+              "id": 669,
               "nodeType": "Block",
               "src": "1234:70:5",
               "statements": [
@@ -701,25 +701,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 665,
+                        "id": 664,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "1252:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 667,
+                      "id": 666,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 666,
+                        "id": 665,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 660,
+                        "referencedDeclaration": 659,
                         "src": "1273:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -733,48 +733,48 @@
                       "nodeType": "IndexAccess",
                       "src": "1252:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 668,
+                    "id": 667,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientName",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 628,
+                    "referencedDeclaration": 627,
                     "src": "1252:44:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 664,
-                  "id": 669,
+                  "functionReturnParameters": 663,
+                  "id": 668,
                   "nodeType": "Return",
                   "src": "1245:51:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Name\nparams _patientId -  patient name***",
-            "id": 671,
+            "id": 670,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientName",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 661,
+              "id": 660,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 660,
+                  "id": 659,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 671,
+                  "scope": 670,
                   "src": "1174:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -783,7 +783,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 659,
+                    "id": 658,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1174:6:5",
@@ -799,15 +799,15 @@
               "src": "1173:26:5"
             },
             "returnParameters": {
-              "id": 664,
+              "id": 663,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 663,
+                  "id": 662,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 671,
+                  "scope": 670,
                   "src": "1220:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -816,7 +816,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 662,
+                    "id": 661,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1220:6:5",
@@ -831,7 +831,7 @@
               ],
               "src": "1219:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "1150:154:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -839,14 +839,14 @@
           },
           {
             "body": {
-              "id": 685,
+              "id": 684,
               "nodeType": "Block",
               "src": "1566:94:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 683,
+                    "id": 682,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -857,25 +857,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 678,
+                          "id": 677,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "1577:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 680,
+                        "id": 679,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 679,
+                          "id": 678,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 673,
+                          "referencedDeclaration": 672,
                           "src": "1598:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -889,18 +889,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1577:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 681,
+                      "id": 680,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientMobileNumber",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 630,
+                      "referencedDeclaration": 629,
                       "src": "1577:52:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -911,11 +911,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 682,
+                      "id": 681,
                       "name": "_patientMobileNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 675,
+                      "referencedDeclaration": 674,
                       "src": "1632:20:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -928,29 +928,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 684,
+                  "id": 683,
                   "nodeType": "ExpressionStatement",
                   "src": "1577:75:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients Mobile Number\nparams _patientMobileNumber -  patient Mobile Number\nparams _patientId***",
-            "id": 686,
+            "id": 685,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientMobileNumber",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 676,
+              "id": 675,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 673,
+                  "id": 672,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 686,
+                  "scope": 685,
                   "src": "1498:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -959,7 +959,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 672,
+                    "id": 671,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1498:6:5",
@@ -973,10 +973,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 675,
+                  "id": 674,
                   "name": "_patientMobileNumber",
                   "nodeType": "VariableDeclaration",
-                  "scope": 686,
+                  "scope": 685,
                   "src": "1524:34:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -985,7 +985,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 674,
+                    "id": 673,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1524:6:5",
@@ -1001,12 +1001,12 @@
               "src": "1497:62:5"
             },
             "returnParameters": {
-              "id": 677,
+              "id": 676,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1566:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "1466:194:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1014,7 +1014,7 @@
           },
           {
             "body": {
-              "id": 698,
+              "id": 697,
               "nodeType": "Block",
               "src": "1859:78:5",
               "statements": [
@@ -1025,25 +1025,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 693,
+                        "id": 692,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "1877:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 695,
+                      "id": 694,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 694,
+                        "id": 693,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 688,
+                        "referencedDeclaration": 687,
                         "src": "1898:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1057,48 +1057,48 @@
                       "nodeType": "IndexAccess",
                       "src": "1877:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 696,
+                    "id": 695,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientMobileNumber",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 630,
+                    "referencedDeclaration": 629,
                     "src": "1877:52:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 692,
-                  "id": 697,
+                  "functionReturnParameters": 691,
+                  "id": 696,
                   "nodeType": "Return",
                   "src": "1870:59:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Mobile Number\nparams _patientId***",
-            "id": 699,
+            "id": 698,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientMobileNumber",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 689,
+              "id": 688,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 688,
+                  "id": 687,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 699,
+                  "scope": 698,
                   "src": "1799:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1107,7 +1107,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 687,
+                    "id": 686,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1799:6:5",
@@ -1123,15 +1123,15 @@
               "src": "1798:26:5"
             },
             "returnParameters": {
-              "id": 692,
+              "id": 691,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 691,
+                  "id": 690,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 699,
+                  "scope": 698,
                   "src": "1845:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1140,7 +1140,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 690,
+                    "id": 689,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1845:6:5",
@@ -1155,7 +1155,7 @@
               ],
               "src": "1844:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "1767:170:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -1163,14 +1163,14 @@
           },
           {
             "body": {
-              "id": 713,
+              "id": 712,
               "nodeType": "Block",
               "src": "2182:82:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 711,
+                    "id": 710,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1181,25 +1181,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 706,
+                          "id": 705,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "2193:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 708,
+                        "id": 707,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 707,
+                          "id": 706,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 701,
+                          "referencedDeclaration": 700,
                           "src": "2214:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1213,18 +1213,18 @@
                         "nodeType": "IndexAccess",
                         "src": "2193:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 709,
+                      "id": 708,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientGender",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 632,
+                      "referencedDeclaration": 631,
                       "src": "2193:46:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1235,11 +1235,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 710,
+                      "id": 709,
                       "name": "_patientGender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 703,
+                      "referencedDeclaration": 702,
                       "src": "2242:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1252,29 +1252,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 712,
+                  "id": 711,
                   "nodeType": "ExpressionStatement",
                   "src": "2193:63:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the Gender of the Patient\nparams _patientGender -  patient Mobile Number\nparams _patientId***",
-            "id": 714,
+            "id": 713,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientGender",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 704,
+              "id": 703,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 701,
+                  "id": 700,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 713,
                   "src": "2120:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1283,7 +1283,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 700,
+                    "id": 699,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2120:6:5",
@@ -1297,10 +1297,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 703,
+                  "id": 702,
                   "name": "_patientGender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 713,
                   "src": "2146:28:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1309,7 +1309,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 702,
+                    "id": 701,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2146:6:5",
@@ -1325,12 +1325,12 @@
               "src": "2119:56:5"
             },
             "returnParameters": {
-              "id": 705,
+              "id": 704,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2182:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2094:170:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1338,7 +1338,7 @@
           },
           {
             "body": {
-              "id": 726,
+              "id": 725,
               "nodeType": "Block",
               "src": "2450:72:5",
               "statements": [
@@ -1349,25 +1349,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 721,
+                        "id": 720,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "2468:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 723,
+                      "id": 722,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 722,
+                        "id": 721,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 716,
+                        "referencedDeclaration": 715,
                         "src": "2489:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1381,48 +1381,48 @@
                       "nodeType": "IndexAccess",
                       "src": "2468:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 724,
+                    "id": 723,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientGender",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 632,
+                    "referencedDeclaration": 631,
                     "src": "2468:46:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 720,
-                  "id": 725,
+                  "functionReturnParameters": 719,
+                  "id": 724,
                   "nodeType": "Return",
                   "src": "2461:53:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Gender\nparams _patientId***",
-            "id": 727,
+            "id": 726,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientGender",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 717,
+              "id": 716,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 716,
+                  "id": 715,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
+                  "scope": 726,
                   "src": "2390:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1431,7 +1431,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 715,
+                    "id": 714,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2390:6:5",
@@ -1447,15 +1447,15 @@
               "src": "2389:26:5"
             },
             "returnParameters": {
-              "id": 720,
+              "id": 719,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 719,
+                  "id": 718,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
+                  "scope": 726,
                   "src": "2436:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1464,7 +1464,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 718,
+                    "id": 717,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2436:6:5",
@@ -1479,7 +1479,7 @@
               ],
               "src": "2435:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2364:158:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -1487,14 +1487,14 @@
           },
           {
             "body": {
-              "id": 741,
+              "id": 740,
               "nodeType": "Block",
               "src": "2759:84:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 739,
+                    "id": 738,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1505,25 +1505,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 734,
+                          "id": 733,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "2770:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 736,
+                        "id": 735,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 735,
+                          "id": 734,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 729,
+                          "referencedDeclaration": 728,
                           "src": "2791:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1537,18 +1537,18 @@
                         "nodeType": "IndexAccess",
                         "src": "2770:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 737,
+                      "id": 736,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 634,
+                      "referencedDeclaration": 633,
                       "src": "2770:47:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1559,11 +1559,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 738,
+                      "id": 737,
                       "name": "_patientAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 731,
+                      "referencedDeclaration": 730,
                       "src": "2820:15:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1576,29 +1576,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 740,
+                  "id": 739,
                   "nodeType": "ExpressionStatement",
                   "src": "2770:65:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients Address\nparams _patientAddress -  patient Address\nparams _patientId***",
-            "id": 742,
+            "id": 741,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 732,
+              "id": 731,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 729,
+                  "id": 728,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 742,
+                  "scope": 741,
                   "src": "2696:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1607,7 +1607,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 728,
+                    "id": 727,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2696:6:5",
@@ -1621,10 +1621,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 731,
+                  "id": 730,
                   "name": "_patientAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 742,
+                  "scope": 741,
                   "src": "2722:29:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1633,7 +1633,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 730,
+                    "id": 729,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2722:6:5",
@@ -1649,12 +1649,12 @@
               "src": "2695:57:5"
             },
             "returnParameters": {
-              "id": 733,
+              "id": 732,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2759:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2669:174:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1662,7 +1662,7 @@
           },
           {
             "body": {
-              "id": 754,
+              "id": 753,
               "nodeType": "Block",
               "src": "3037:73:5",
               "statements": [
@@ -1673,25 +1673,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 749,
+                        "id": 748,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "3055:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 751,
+                      "id": 750,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 750,
+                        "id": 749,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 744,
+                        "referencedDeclaration": 743,
                         "src": "3076:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1705,48 +1705,48 @@
                       "nodeType": "IndexAccess",
                       "src": "3055:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 752,
+                    "id": 751,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientAddress",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 634,
+                    "referencedDeclaration": 633,
                     "src": "3055:47:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 748,
-                  "id": 753,
+                  "functionReturnParameters": 747,
+                  "id": 752,
                   "nodeType": "Return",
                   "src": "3048:54:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Mobile Number\nparams _patientId***",
-            "id": 755,
+            "id": 754,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 745,
+              "id": 744,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 744,
+                  "id": 743,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 755,
+                  "scope": 754,
                   "src": "2977:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1755,7 +1755,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 743,
+                    "id": 742,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2977:6:5",
@@ -1771,15 +1771,15 @@
               "src": "2976:26:5"
             },
             "returnParameters": {
-              "id": 748,
+              "id": 747,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 747,
+                  "id": 746,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 755,
+                  "scope": 754,
                   "src": "3023:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1788,7 +1788,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 746,
+                    "id": 745,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3023:6:5",
@@ -1803,7 +1803,7 @@
               ],
               "src": "3022:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2950:160:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -1811,14 +1811,14 @@
           },
           {
             "body": {
-              "id": 769,
+              "id": 768,
               "nodeType": "Block",
               "src": "3380:92:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 767,
+                    "id": 766,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1829,25 +1829,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 762,
+                          "id": 761,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "3391:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 764,
+                        "id": 763,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 763,
+                          "id": 762,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 757,
+                          "referencedDeclaration": 756,
                           "src": "3412:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1861,18 +1861,18 @@
                         "nodeType": "IndexAccess",
                         "src": "3391:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 765,
+                      "id": 764,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientDateOfBirth",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 636,
+                      "referencedDeclaration": 635,
                       "src": "3391:51:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1883,11 +1883,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 766,
+                      "id": 765,
                       "name": "_patientDateOfBirth",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 759,
+                      "referencedDeclaration": 758,
                       "src": "3445:19:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1900,29 +1900,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 768,
+                  "id": 767,
                   "nodeType": "ExpressionStatement",
                   "src": "3391:73:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients date of birth\nparams _patientMobileNumber -  patient patient date of birth\nparams _patientId***",
-            "id": 770,
+            "id": 769,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientDateOfBirth",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 760,
+              "id": 759,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 757,
+                  "id": 756,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 770,
+                  "scope": 769,
                   "src": "3313:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1931,7 +1931,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 756,
+                    "id": 755,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3313:6:5",
@@ -1945,10 +1945,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 759,
+                  "id": 758,
                   "name": "_patientDateOfBirth",
                   "nodeType": "VariableDeclaration",
-                  "scope": 770,
+                  "scope": 769,
                   "src": "3339:33:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1957,7 +1957,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 758,
+                    "id": 757,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3339:6:5",
@@ -1973,12 +1973,12 @@
               "src": "3312:61:5"
             },
             "returnParameters": {
-              "id": 761,
+              "id": 760,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3380:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "3282:190:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1986,7 +1986,7 @@
           },
           {
             "body": {
-              "id": 782,
+              "id": 781,
               "nodeType": "Block",
               "src": "3670:77:5",
               "statements": [
@@ -1997,25 +1997,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 777,
+                        "id": 776,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "3688:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 779,
+                      "id": 778,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 778,
+                        "id": 777,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 772,
+                        "referencedDeclaration": 771,
                         "src": "3709:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2029,48 +2029,48 @@
                       "nodeType": "IndexAccess",
                       "src": "3688:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 780,
+                    "id": 779,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientDateOfBirth",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 636,
+                    "referencedDeclaration": 635,
                     "src": "3688:51:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 776,
-                  "id": 781,
+                  "functionReturnParameters": 775,
+                  "id": 780,
                   "nodeType": "Return",
                   "src": "3681:58:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients date of birth\nparams _patientId***",
-            "id": 783,
+            "id": 782,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientDateOfBirth",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 773,
+              "id": 772,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 772,
+                  "id": 771,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 783,
+                  "scope": 782,
                   "src": "3610:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2079,7 +2079,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 771,
+                    "id": 770,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3610:6:5",
@@ -2095,15 +2095,15 @@
               "src": "3609:26:5"
             },
             "returnParameters": {
-              "id": 776,
+              "id": 775,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 775,
+                  "id": 774,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 783,
+                  "scope": 782,
                   "src": "3656:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2112,7 +2112,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 774,
+                    "id": 773,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3656:6:5",
@@ -2127,7 +2127,7 @@
               ],
               "src": "3655:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "3579:168:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -2135,14 +2135,14 @@
           },
           {
             "body": {
-              "id": 807,
+              "id": 806,
               "nodeType": "Block",
               "src": "3961:357:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 805,
+                    "id": 804,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2153,25 +2153,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 790,
+                          "id": 789,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "4168:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 792,
+                        "id": 791,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 791,
+                          "id": 790,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 785,
+                          "referencedDeclaration": 784,
                           "src": "4189:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -2185,18 +2185,18 @@
                         "nodeType": "IndexAccess",
                         "src": "4168:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 793,
+                      "id": 792,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "allergiesKnown",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 638,
+                      "referencedDeclaration": 637,
                       "src": "4168:47:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -2217,25 +2217,25 @@
                                 "argumentTypes": null,
                                 "baseExpression": {
                                   "argumentTypes": null,
-                                  "id": 797,
+                                  "id": 796,
                                   "name": "patientIdInformation",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 643,
+                                  "referencedDeclaration": 642,
                                   "src": "4242:20:5",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                                    "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                                     "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                                   }
                                 },
-                                "id": 799,
+                                "id": 798,
                                 "indexExpression": {
                                   "argumentTypes": null,
-                                  "id": 798,
+                                  "id": 797,
                                   "name": "_patientId",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 785,
+                                  "referencedDeclaration": 784,
                                   "src": "4263:10:5",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_string_memory_ptr",
@@ -2249,18 +2249,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4242:32:5",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                                  "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                                   "typeString": "struct Patients.patientsInfo storage ref"
                                 }
                               },
-                              "id": 800,
+                              "id": 799,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "patientMobileNumber",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 630,
+                              "referencedDeclaration": 629,
                               "src": "4242:52:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_storage",
@@ -2270,7 +2270,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "2c20",
-                              "id": 801,
+                              "id": 800,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2287,11 +2287,11 @@
                             },
                             {
                               "argumentTypes": null,
-                              "id": 802,
+                              "id": 801,
                               "name": "_allergy",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 787,
+                              "referencedDeclaration": 786,
                               "src": "4300:8:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -2316,18 +2316,18 @@
                             ],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 795,
+                              "id": 794,
                               "name": "abi",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1037,
+                              "referencedDeclaration": 1036,
                               "src": "4225:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_abi",
                                 "typeString": "abi"
                               }
                             },
-                            "id": 796,
+                            "id": 795,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2341,7 +2341,7 @@
                               "typeString": "function () pure returns (bytes memory)"
                             }
                           },
-                          "id": 803,
+                          "id": 802,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2363,7 +2363,7 @@
                             "typeString": "bytes memory"
                           }
                         ],
-                        "id": 794,
+                        "id": 793,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2376,7 +2376,7 @@
                         },
                         "typeName": "string"
                       },
-                      "id": 804,
+                      "id": 803,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2396,29 +2396,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 806,
+                  "id": 805,
                   "nodeType": "ExpressionStatement",
                   "src": "4168:142:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients allergies \nparams _allergy - \nparams _patientId***",
-            "id": 808,
+            "id": 807,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientAllergies",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 788,
+              "id": 787,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 785,
+                  "id": 784,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 808,
+                  "scope": 807,
                   "src": "3905:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2427,7 +2427,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 784,
+                    "id": 783,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3905:6:5",
@@ -2441,10 +2441,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 787,
+                  "id": 786,
                   "name": "_allergy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 808,
+                  "scope": 807,
                   "src": "3931:22:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2453,7 +2453,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 786,
+                    "id": 785,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3931:6:5",
@@ -2469,12 +2469,12 @@
               "src": "3904:50:5"
             },
             "returnParameters": {
-              "id": 789,
+              "id": 788,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3961:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "3876:442:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2482,7 +2482,7 @@
           },
           {
             "body": {
-              "id": 820,
+              "id": 819,
               "nodeType": "Block",
               "src": "4512:75:5",
               "statements": [
@@ -2493,25 +2493,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 815,
+                        "id": 814,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "4530:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 817,
+                      "id": 816,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 816,
+                        "id": 815,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 810,
+                        "referencedDeclaration": 809,
                         "src": "4551:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2525,48 +2525,48 @@
                       "nodeType": "IndexAccess",
                       "src": "4530:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 818,
+                    "id": 817,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "allergiesKnown",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 638,
+                    "referencedDeclaration": 637,
                     "src": "4530:47:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 814,
-                  "id": 819,
+                  "functionReturnParameters": 813,
+                  "id": 818,
                   "nodeType": "Return",
                   "src": "4523:54:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients allergies  \nparams _patientId***",
-            "id": 821,
+            "id": 820,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientAllergies",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 811,
+              "id": 810,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 810,
+                  "id": 809,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 821,
+                  "scope": 820,
                   "src": "4452:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2575,7 +2575,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 809,
+                    "id": 808,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "4452:6:5",
@@ -2591,15 +2591,15 @@
               "src": "4451:26:5"
             },
             "returnParameters": {
-              "id": 814,
+              "id": 813,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 813,
+                  "id": 812,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 821,
+                  "scope": 820,
                   "src": "4498:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2608,7 +2608,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 812,
+                    "id": 811,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "4498:6:5",
@@ -2623,14 +2623,14 @@
               ],
               "src": "4497:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "4423:164:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 823,
+        "scope": 822,
         "src": "140:4454:5"
       }
     ],
@@ -2640,14 +2640,14 @@
     "absolutePath": "/C/Users/Neeraj/Desktop/Meidcal Health Records/src/contracts/Patients.sol",
     "exportedSymbols": {
       "Patients": [
-        822
+        821
       ]
     },
-    "id": 823,
+    "id": 822,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 626,
+        "id": 625,
         "literals": [
           "solidity",
           "0.5",
@@ -2662,23 +2662,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 822,
+        "id": 821,
         "linearizedBaseContracts": [
-          822
+          821
         ],
         "name": "Patients",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Patients.patientsInfo",
-            "id": 639,
+            "id": 638,
             "members": [
               {
                 "constant": false,
-                "id": 628,
+                "id": 627,
                 "name": "patientName",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "194:18:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2687,7 +2687,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 627,
+                  "id": 626,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "194:6:5",
@@ -2701,10 +2701,10 @@
               },
               {
                 "constant": false,
-                "id": 630,
+                "id": 629,
                 "name": "patientMobileNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "253:26:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2713,7 +2713,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 629,
+                  "id": 628,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "253:6:5",
@@ -2727,10 +2727,10 @@
               },
               {
                 "constant": false,
-                "id": 632,
+                "id": 631,
                 "name": "patientGender",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "290:20:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2739,7 +2739,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 631,
+                  "id": 630,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "290:6:5",
@@ -2753,10 +2753,10 @@
               },
               {
                 "constant": false,
-                "id": 634,
+                "id": 633,
                 "name": "patientAddress",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "321:21:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2765,7 +2765,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 633,
+                  "id": 632,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "321:6:5",
@@ -2779,10 +2779,10 @@
               },
               {
                 "constant": false,
-                "id": 636,
+                "id": 635,
                 "name": "patientDateOfBirth",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "353:25:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2791,7 +2791,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 635,
+                  "id": 634,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "353:6:5",
@@ -2805,10 +2805,10 @@
               },
               {
                 "constant": false,
-                "id": 638,
+                "id": 637,
                 "name": "allergiesKnown",
                 "nodeType": "VariableDeclaration",
-                "scope": 639,
+                "scope": 638,
                 "src": "389:21:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2817,7 +2817,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 637,
+                  "id": 636,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "389:6:5",
@@ -2832,27 +2832,27 @@
             ],
             "name": "patientsInfo",
             "nodeType": "StructDefinition",
-            "scope": 822,
+            "scope": 821,
             "src": "164:254:5",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 643,
+            "id": 642,
             "name": "patientIdInformation",
             "nodeType": "VariableDeclaration",
-            "scope": 822,
+            "scope": 821,
             "src": "490:50:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
               "typeString": "mapping(string => struct Patients.patientsInfo)"
             },
             "typeName": {
-              "id": 642,
+              "id": 641,
               "keyType": {
-                "id": 640,
+                "id": 639,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "498:6:5",
@@ -2864,18 +2864,18 @@
               "nodeType": "Mapping",
               "src": "490:29:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                 "typeString": "mapping(string => struct Patients.patientsInfo)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 641,
+                "id": 640,
                 "name": "patientsInfo",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 639,
+                "referencedDeclaration": 638,
                 "src": "506:12:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_patientsInfo_$639_storage_ptr",
+                  "typeIdentifier": "t_struct$_patientsInfo_$638_storage_ptr",
                   "typeString": "struct Patients.patientsInfo"
                 }
               }
@@ -2885,14 +2885,14 @@
           },
           {
             "body": {
-              "id": 657,
+              "id": 656,
               "nodeType": "Block",
               "src": "907:129:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 655,
+                    "id": 654,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2903,25 +2903,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 650,
+                          "id": 649,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "976:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 652,
+                        "id": 651,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 651,
+                          "id": 650,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 645,
+                          "referencedDeclaration": 644,
                           "src": "997:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -2935,18 +2935,18 @@
                         "nodeType": "IndexAccess",
                         "src": "976:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 653,
+                      "id": 652,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientName",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 628,
+                      "referencedDeclaration": 627,
                       "src": "976:44:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -2957,11 +2957,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 654,
+                      "id": 653,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 646,
                       "src": "1023:5:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -2974,29 +2974,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 656,
+                  "id": 655,
                   "nodeType": "ExpressionStatement",
                   "src": "976:52:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients Names \nparams _name -  patient name\nparams _patientId - patient'a generated Id.***",
-            "id": 658,
+            "id": 657,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientName",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 648,
+              "id": 647,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 645,
+                  "id": 644,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 658,
+                  "scope": 657,
                   "src": "854:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3005,7 +3005,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 644,
+                    "id": 643,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "854:6:5",
@@ -3019,10 +3019,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 647,
+                  "id": 646,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 658,
+                  "scope": 657,
                   "src": "880:19:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3031,7 +3031,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 646,
+                    "id": 645,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "880:6:5",
@@ -3047,12 +3047,12 @@
               "src": "853:47:5"
             },
             "returnParameters": {
-              "id": 649,
+              "id": 648,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "907:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "830:206:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3060,7 +3060,7 @@
           },
           {
             "body": {
-              "id": 670,
+              "id": 669,
               "nodeType": "Block",
               "src": "1234:70:5",
               "statements": [
@@ -3071,25 +3071,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 665,
+                        "id": 664,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "1252:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 667,
+                      "id": 666,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 666,
+                        "id": 665,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 660,
+                        "referencedDeclaration": 659,
                         "src": "1273:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -3103,48 +3103,48 @@
                       "nodeType": "IndexAccess",
                       "src": "1252:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 668,
+                    "id": 667,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientName",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 628,
+                    "referencedDeclaration": 627,
                     "src": "1252:44:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 664,
-                  "id": 669,
+                  "functionReturnParameters": 663,
+                  "id": 668,
                   "nodeType": "Return",
                   "src": "1245:51:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Name\nparams _patientId -  patient name***",
-            "id": 671,
+            "id": 670,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientName",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 661,
+              "id": 660,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 660,
+                  "id": 659,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 671,
+                  "scope": 670,
                   "src": "1174:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3153,7 +3153,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 659,
+                    "id": 658,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1174:6:5",
@@ -3169,15 +3169,15 @@
               "src": "1173:26:5"
             },
             "returnParameters": {
-              "id": 664,
+              "id": 663,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 663,
+                  "id": 662,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 671,
+                  "scope": 670,
                   "src": "1220:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3186,7 +3186,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 662,
+                    "id": 661,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1220:6:5",
@@ -3201,7 +3201,7 @@
               ],
               "src": "1219:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "1150:154:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -3209,14 +3209,14 @@
           },
           {
             "body": {
-              "id": 685,
+              "id": 684,
               "nodeType": "Block",
               "src": "1566:94:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 683,
+                    "id": 682,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3227,25 +3227,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 678,
+                          "id": 677,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "1577:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 680,
+                        "id": 679,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 679,
+                          "id": 678,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 673,
+                          "referencedDeclaration": 672,
                           "src": "1598:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3259,18 +3259,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1577:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 681,
+                      "id": 680,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientMobileNumber",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 630,
+                      "referencedDeclaration": 629,
                       "src": "1577:52:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -3281,11 +3281,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 682,
+                      "id": 681,
                       "name": "_patientMobileNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 675,
+                      "referencedDeclaration": 674,
                       "src": "1632:20:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -3298,29 +3298,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 684,
+                  "id": 683,
                   "nodeType": "ExpressionStatement",
                   "src": "1577:75:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients Mobile Number\nparams _patientMobileNumber -  patient Mobile Number\nparams _patientId***",
-            "id": 686,
+            "id": 685,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientMobileNumber",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 676,
+              "id": 675,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 673,
+                  "id": 672,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 686,
+                  "scope": 685,
                   "src": "1498:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3329,7 +3329,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 672,
+                    "id": 671,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1498:6:5",
@@ -3343,10 +3343,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 675,
+                  "id": 674,
                   "name": "_patientMobileNumber",
                   "nodeType": "VariableDeclaration",
-                  "scope": 686,
+                  "scope": 685,
                   "src": "1524:34:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3355,7 +3355,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 674,
+                    "id": 673,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1524:6:5",
@@ -3371,12 +3371,12 @@
               "src": "1497:62:5"
             },
             "returnParameters": {
-              "id": 677,
+              "id": 676,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1566:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "1466:194:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3384,7 +3384,7 @@
           },
           {
             "body": {
-              "id": 698,
+              "id": 697,
               "nodeType": "Block",
               "src": "1859:78:5",
               "statements": [
@@ -3395,25 +3395,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 693,
+                        "id": 692,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "1877:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 695,
+                      "id": 694,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 694,
+                        "id": 693,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 688,
+                        "referencedDeclaration": 687,
                         "src": "1898:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -3427,48 +3427,48 @@
                       "nodeType": "IndexAccess",
                       "src": "1877:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 696,
+                    "id": 695,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientMobileNumber",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 630,
+                    "referencedDeclaration": 629,
                     "src": "1877:52:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 692,
-                  "id": 697,
+                  "functionReturnParameters": 691,
+                  "id": 696,
                   "nodeType": "Return",
                   "src": "1870:59:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Mobile Number\nparams _patientId***",
-            "id": 699,
+            "id": 698,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientMobileNumber",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 689,
+              "id": 688,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 688,
+                  "id": 687,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 699,
+                  "scope": 698,
                   "src": "1799:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3477,7 +3477,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 687,
+                    "id": 686,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1799:6:5",
@@ -3493,15 +3493,15 @@
               "src": "1798:26:5"
             },
             "returnParameters": {
-              "id": 692,
+              "id": 691,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 691,
+                  "id": 690,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 699,
+                  "scope": 698,
                   "src": "1845:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3510,7 +3510,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 690,
+                    "id": 689,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1845:6:5",
@@ -3525,7 +3525,7 @@
               ],
               "src": "1844:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "1767:170:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -3533,14 +3533,14 @@
           },
           {
             "body": {
-              "id": 713,
+              "id": 712,
               "nodeType": "Block",
               "src": "2182:82:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 711,
+                    "id": 710,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3551,25 +3551,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 706,
+                          "id": 705,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "2193:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 708,
+                        "id": 707,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 707,
+                          "id": 706,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 701,
+                          "referencedDeclaration": 700,
                           "src": "2214:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3583,18 +3583,18 @@
                         "nodeType": "IndexAccess",
                         "src": "2193:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 709,
+                      "id": 708,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientGender",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 632,
+                      "referencedDeclaration": 631,
                       "src": "2193:46:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -3605,11 +3605,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 710,
+                      "id": 709,
                       "name": "_patientGender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 703,
+                      "referencedDeclaration": 702,
                       "src": "2242:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -3622,29 +3622,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 712,
+                  "id": 711,
                   "nodeType": "ExpressionStatement",
                   "src": "2193:63:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the Gender of the Patient\nparams _patientGender -  patient Mobile Number\nparams _patientId***",
-            "id": 714,
+            "id": 713,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientGender",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 704,
+              "id": 703,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 701,
+                  "id": 700,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 713,
                   "src": "2120:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3653,7 +3653,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 700,
+                    "id": 699,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2120:6:5",
@@ -3667,10 +3667,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 703,
+                  "id": 702,
                   "name": "_patientGender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 714,
+                  "scope": 713,
                   "src": "2146:28:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3679,7 +3679,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 702,
+                    "id": 701,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2146:6:5",
@@ -3695,12 +3695,12 @@
               "src": "2119:56:5"
             },
             "returnParameters": {
-              "id": 705,
+              "id": 704,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2182:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2094:170:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3708,7 +3708,7 @@
           },
           {
             "body": {
-              "id": 726,
+              "id": 725,
               "nodeType": "Block",
               "src": "2450:72:5",
               "statements": [
@@ -3719,25 +3719,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 721,
+                        "id": 720,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "2468:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 723,
+                      "id": 722,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 722,
+                        "id": 721,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 716,
+                        "referencedDeclaration": 715,
                         "src": "2489:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -3751,48 +3751,48 @@
                       "nodeType": "IndexAccess",
                       "src": "2468:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 724,
+                    "id": 723,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientGender",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 632,
+                    "referencedDeclaration": 631,
                     "src": "2468:46:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 720,
-                  "id": 725,
+                  "functionReturnParameters": 719,
+                  "id": 724,
                   "nodeType": "Return",
                   "src": "2461:53:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Gender\nparams _patientId***",
-            "id": 727,
+            "id": 726,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientGender",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 717,
+              "id": 716,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 716,
+                  "id": 715,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
+                  "scope": 726,
                   "src": "2390:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3801,7 +3801,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 715,
+                    "id": 714,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2390:6:5",
@@ -3817,15 +3817,15 @@
               "src": "2389:26:5"
             },
             "returnParameters": {
-              "id": 720,
+              "id": 719,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 719,
+                  "id": 718,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
+                  "scope": 726,
                   "src": "2436:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3834,7 +3834,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 718,
+                    "id": 717,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2436:6:5",
@@ -3849,7 +3849,7 @@
               ],
               "src": "2435:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2364:158:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -3857,14 +3857,14 @@
           },
           {
             "body": {
-              "id": 741,
+              "id": 740,
               "nodeType": "Block",
               "src": "2759:84:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 739,
+                    "id": 738,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3875,25 +3875,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 734,
+                          "id": 733,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "2770:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 736,
+                        "id": 735,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 735,
+                          "id": 734,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 729,
+                          "referencedDeclaration": 728,
                           "src": "2791:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3907,18 +3907,18 @@
                         "nodeType": "IndexAccess",
                         "src": "2770:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 737,
+                      "id": 736,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 634,
+                      "referencedDeclaration": 633,
                       "src": "2770:47:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -3929,11 +3929,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 738,
+                      "id": 737,
                       "name": "_patientAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 731,
+                      "referencedDeclaration": 730,
                       "src": "2820:15:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -3946,29 +3946,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 740,
+                  "id": 739,
                   "nodeType": "ExpressionStatement",
                   "src": "2770:65:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients Address\nparams _patientAddress -  patient Address\nparams _patientId***",
-            "id": 742,
+            "id": 741,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 732,
+              "id": 731,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 729,
+                  "id": 728,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 742,
+                  "scope": 741,
                   "src": "2696:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3977,7 +3977,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 728,
+                    "id": 727,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2696:6:5",
@@ -3991,10 +3991,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 731,
+                  "id": 730,
                   "name": "_patientAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 742,
+                  "scope": 741,
                   "src": "2722:29:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4003,7 +4003,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 730,
+                    "id": 729,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2722:6:5",
@@ -4019,12 +4019,12 @@
               "src": "2695:57:5"
             },
             "returnParameters": {
-              "id": 733,
+              "id": 732,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2759:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2669:174:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4032,7 +4032,7 @@
           },
           {
             "body": {
-              "id": 754,
+              "id": 753,
               "nodeType": "Block",
               "src": "3037:73:5",
               "statements": [
@@ -4043,25 +4043,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 749,
+                        "id": 748,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "3055:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 751,
+                      "id": 750,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 750,
+                        "id": 749,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 744,
+                        "referencedDeclaration": 743,
                         "src": "3076:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4075,48 +4075,48 @@
                       "nodeType": "IndexAccess",
                       "src": "3055:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 752,
+                    "id": 751,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientAddress",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 634,
+                    "referencedDeclaration": 633,
                     "src": "3055:47:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 748,
-                  "id": 753,
+                  "functionReturnParameters": 747,
+                  "id": 752,
                   "nodeType": "Return",
                   "src": "3048:54:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients Mobile Number\nparams _patientId***",
-            "id": 755,
+            "id": 754,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 745,
+              "id": 744,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 744,
+                  "id": 743,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 755,
+                  "scope": 754,
                   "src": "2977:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4125,7 +4125,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 743,
+                    "id": 742,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "2977:6:5",
@@ -4141,15 +4141,15 @@
               "src": "2976:26:5"
             },
             "returnParameters": {
-              "id": 748,
+              "id": 747,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 747,
+                  "id": 746,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 755,
+                  "scope": 754,
                   "src": "3023:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4158,7 +4158,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 746,
+                    "id": 745,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3023:6:5",
@@ -4173,7 +4173,7 @@
               ],
               "src": "3022:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "2950:160:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -4181,14 +4181,14 @@
           },
           {
             "body": {
-              "id": 769,
+              "id": 768,
               "nodeType": "Block",
               "src": "3380:92:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 767,
+                    "id": 766,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4199,25 +4199,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 762,
+                          "id": 761,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "3391:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 764,
+                        "id": 763,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 763,
+                          "id": 762,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 757,
+                          "referencedDeclaration": 756,
                           "src": "3412:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -4231,18 +4231,18 @@
                         "nodeType": "IndexAccess",
                         "src": "3391:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 765,
+                      "id": 764,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "patientDateOfBirth",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 636,
+                      "referencedDeclaration": 635,
                       "src": "3391:51:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -4253,11 +4253,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 766,
+                      "id": 765,
                       "name": "_patientDateOfBirth",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 759,
+                      "referencedDeclaration": 758,
                       "src": "3445:19:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -4270,29 +4270,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 768,
+                  "id": 767,
                   "nodeType": "ExpressionStatement",
                   "src": "3391:73:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients date of birth\nparams _patientMobileNumber -  patient patient date of birth\nparams _patientId***",
-            "id": 770,
+            "id": 769,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientDateOfBirth",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 760,
+              "id": 759,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 757,
+                  "id": 756,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 770,
+                  "scope": 769,
                   "src": "3313:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4301,7 +4301,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 756,
+                    "id": 755,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3313:6:5",
@@ -4315,10 +4315,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 759,
+                  "id": 758,
                   "name": "_patientDateOfBirth",
                   "nodeType": "VariableDeclaration",
-                  "scope": 770,
+                  "scope": 769,
                   "src": "3339:33:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4327,7 +4327,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 758,
+                    "id": 757,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3339:6:5",
@@ -4343,12 +4343,12 @@
               "src": "3312:61:5"
             },
             "returnParameters": {
-              "id": 761,
+              "id": 760,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3380:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "3282:190:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4356,7 +4356,7 @@
           },
           {
             "body": {
-              "id": 782,
+              "id": 781,
               "nodeType": "Block",
               "src": "3670:77:5",
               "statements": [
@@ -4367,25 +4367,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 777,
+                        "id": 776,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "3688:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 779,
+                      "id": 778,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 778,
+                        "id": 777,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 772,
+                        "referencedDeclaration": 771,
                         "src": "3709:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4399,48 +4399,48 @@
                       "nodeType": "IndexAccess",
                       "src": "3688:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 780,
+                    "id": 779,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "patientDateOfBirth",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 636,
+                    "referencedDeclaration": 635,
                     "src": "3688:51:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 776,
-                  "id": 781,
+                  "functionReturnParameters": 775,
+                  "id": 780,
                   "nodeType": "Return",
                   "src": "3681:58:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients date of birth\nparams _patientId***",
-            "id": 783,
+            "id": 782,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientDateOfBirth",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 773,
+              "id": 772,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 772,
+                  "id": 771,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 783,
+                  "scope": 782,
                   "src": "3610:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4449,7 +4449,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 771,
+                    "id": 770,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3610:6:5",
@@ -4465,15 +4465,15 @@
               "src": "3609:26:5"
             },
             "returnParameters": {
-              "id": 776,
+              "id": 775,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 775,
+                  "id": 774,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 783,
+                  "scope": 782,
                   "src": "3656:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4482,7 +4482,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 774,
+                    "id": 773,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3656:6:5",
@@ -4497,7 +4497,7 @@
               ],
               "src": "3655:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "3579:168:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -4505,14 +4505,14 @@
           },
           {
             "body": {
-              "id": 807,
+              "id": 806,
               "nodeType": "Block",
               "src": "3961:357:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 805,
+                    "id": 804,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4523,25 +4523,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 790,
+                          "id": 789,
                           "name": "patientIdInformation",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 643,
+                          "referencedDeclaration": 642,
                           "src": "4168:20:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                             "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                           }
                         },
-                        "id": 792,
+                        "id": 791,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 791,
+                          "id": 790,
                           "name": "_patientId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 785,
+                          "referencedDeclaration": 784,
                           "src": "4189:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -4555,18 +4555,18 @@
                         "nodeType": "IndexAccess",
                         "src": "4168:32:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                          "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                           "typeString": "struct Patients.patientsInfo storage ref"
                         }
                       },
-                      "id": 793,
+                      "id": 792,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "allergiesKnown",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 638,
+                      "referencedDeclaration": 637,
                       "src": "4168:47:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -4587,25 +4587,25 @@
                                 "argumentTypes": null,
                                 "baseExpression": {
                                   "argumentTypes": null,
-                                  "id": 797,
+                                  "id": 796,
                                   "name": "patientIdInformation",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 643,
+                                  "referencedDeclaration": 642,
                                   "src": "4242:20:5",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                                    "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                                     "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                                   }
                                 },
-                                "id": 799,
+                                "id": 798,
                                 "indexExpression": {
                                   "argumentTypes": null,
-                                  "id": 798,
+                                  "id": 797,
                                   "name": "_patientId",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 785,
+                                  "referencedDeclaration": 784,
                                   "src": "4263:10:5",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_string_memory_ptr",
@@ -4619,18 +4619,18 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4242:32:5",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                                  "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                                   "typeString": "struct Patients.patientsInfo storage ref"
                                 }
                               },
-                              "id": 800,
+                              "id": 799,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "patientMobileNumber",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 630,
+                              "referencedDeclaration": 629,
                               "src": "4242:52:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_storage",
@@ -4640,7 +4640,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "2c20",
-                              "id": 801,
+                              "id": 800,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -4657,11 +4657,11 @@
                             },
                             {
                               "argumentTypes": null,
-                              "id": 802,
+                              "id": 801,
                               "name": "_allergy",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 787,
+                              "referencedDeclaration": 786,
                               "src": "4300:8:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -4686,18 +4686,18 @@
                             ],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 795,
+                              "id": 794,
                               "name": "abi",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1037,
+                              "referencedDeclaration": 1036,
                               "src": "4225:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_abi",
                                 "typeString": "abi"
                               }
                             },
-                            "id": 796,
+                            "id": 795,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -4711,7 +4711,7 @@
                               "typeString": "function () pure returns (bytes memory)"
                             }
                           },
-                          "id": 803,
+                          "id": 802,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4733,7 +4733,7 @@
                             "typeString": "bytes memory"
                           }
                         ],
-                        "id": 794,
+                        "id": 793,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4746,7 +4746,7 @@
                         },
                         "typeName": "string"
                       },
-                      "id": 804,
+                      "id": 803,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4766,29 +4766,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 806,
+                  "id": 805,
                   "nodeType": "ExpressionStatement",
                   "src": "4168:142:5"
                 }
               ]
             },
             "documentation": "**\nThis function adds the patients allergies \nparams _allergy - \nparams _patientId***",
-            "id": 808,
+            "id": 807,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addPatientAllergies",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 788,
+              "id": 787,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 785,
+                  "id": 784,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 808,
+                  "scope": 807,
                   "src": "3905:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4797,7 +4797,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 784,
+                    "id": 783,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3905:6:5",
@@ -4811,10 +4811,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 787,
+                  "id": 786,
                   "name": "_allergy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 808,
+                  "scope": 807,
                   "src": "3931:22:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4823,7 +4823,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 786,
+                    "id": 785,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "3931:6:5",
@@ -4839,12 +4839,12 @@
               "src": "3904:50:5"
             },
             "returnParameters": {
-              "id": 789,
+              "id": 788,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3961:0:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "3876:442:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4852,7 +4852,7 @@
           },
           {
             "body": {
-              "id": 820,
+              "id": 819,
               "nodeType": "Block",
               "src": "4512:75:5",
               "statements": [
@@ -4863,25 +4863,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 815,
+                        "id": 814,
                         "name": "patientIdInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 643,
+                        "referencedDeclaration": 642,
                         "src": "4530:20:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$639_storage_$",
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_patientsInfo_$638_storage_$",
                           "typeString": "mapping(string memory => struct Patients.patientsInfo storage ref)"
                         }
                       },
-                      "id": 817,
+                      "id": 816,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 816,
+                        "id": 815,
                         "name": "_patientId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 810,
+                        "referencedDeclaration": 809,
                         "src": "4551:10:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -4895,48 +4895,48 @@
                       "nodeType": "IndexAccess",
                       "src": "4530:32:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_patientsInfo_$639_storage",
+                        "typeIdentifier": "t_struct$_patientsInfo_$638_storage",
                         "typeString": "struct Patients.patientsInfo storage ref"
                       }
                     },
-                    "id": 818,
+                    "id": 817,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "allergiesKnown",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 638,
+                    "referencedDeclaration": 637,
                     "src": "4530:47:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 814,
-                  "id": 819,
+                  "functionReturnParameters": 813,
+                  "id": 818,
                   "nodeType": "Return",
                   "src": "4523:54:5"
                 }
               ]
             },
             "documentation": "**\nThis function returns the patients allergies  \nparams _patientId***",
-            "id": 821,
+            "id": 820,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getPatientAllergies",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 811,
+              "id": 810,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 810,
+                  "id": 809,
                   "name": "_patientId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 821,
+                  "scope": 820,
                   "src": "4452:24:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4945,7 +4945,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 809,
+                    "id": 808,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "4452:6:5",
@@ -4961,15 +4961,15 @@
               "src": "4451:26:5"
             },
             "returnParameters": {
-              "id": 814,
+              "id": 813,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 813,
+                  "id": 812,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 821,
+                  "scope": 820,
                   "src": "4498:13:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4978,7 +4978,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 812,
+                    "id": 811,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "4498:6:5",
@@ -4993,14 +4993,14 @@
               ],
               "src": "4497:15:5"
             },
-            "scope": 822,
+            "scope": 821,
             "src": "4423:164:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 823,
+        "scope": 822,
         "src": "140:4454:5"
       }
     ],
@@ -5014,12 +5014,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xDf1AE3826f26a17Ccfe2E2420c19B85C8a43120e",
-      "transactionHash": "0x499eebc590e1b7d75d821462b405b961d1d3b29662d0d6d0dcaf0579377a0419"
+      "address": "0xc91B533Bd908590b102EEfDf37254E7f973391b1",
+      "transactionHash": "0x8ecfb790271ad5376d8d70cccfd78bdabc533c4877d1427eb62bdab9710fb0b9"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2022-05-28T12:40:19.595Z",
+  "updatedAt": "2022-06-13T03:59:18.555Z",
   "devdoc": {
     "methods": {}
   },

@@ -12,12 +12,12 @@ contract AccessControl{
     Address here stored are added by the contract owner only.
     ****/
     
-    address[] authorisedDoctors;
+    // address[] authorisedDoctors;
     mapping (address=>bool)authorisedMap; //Created for easy check
 
     constructor() public{
         owner = msg.sender;
-        authorisedDoctors.push(owner);
+        // authorisedDoctors.push(owner);
         authorisedMap[owner]=true;
     }
     
@@ -52,7 +52,15 @@ contract AccessControl{
     _doctorAddress
     ****/
     function addAuthorisedDoctor(address _doctorAddress) isOwner public {
-        authorisedDoctors.push(_doctorAddress);
+        // authorisedDoctors.push(_doctorAddress);
         authorisedMap[_doctorAddress] = true;
     }    
+    /*****
+    RemoveAuthorisedDoctor - Removes the permission of the doctor that was previously assigned the permissions.
+    Parameter Passes - 
+    _doctorAddress
+    *****/
+    function removeAuthorisedDoctor(address _doctorAddress) isOwner public{
+        authorisedMap[_doctorAddress] = false;
+    }
 }
