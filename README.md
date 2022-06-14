@@ -22,3 +22,24 @@ Successful Retrieving and Updating Data Done.[✅]
 3. Owner Of the Contract/Deployer of the contract can be the only one to add or remove the doctors Permissions. [✅]
 4. Store the report of the patient in IPFS. []
    
+
+
+## Clean Networks:
+truffle networks --clean : removes all the deployments
+truffle migrate --reset --network <goerli - N/W Name>: Resets the contract deployment i.e starts from 0 and deploys it on goerli net.
+truffle console --network goerli: opens goerli console.
+
+
+## UPDATES MAIN: 
+2_deploy_contracts.js -> gas limit addeed
+truffle config updated
+created .env file
+
+## Giving Access:
+Access Nedds to be given for 2 Contracts (AddMedicalInfo & GetMedicalInfo) like this:
+get = await GetMedicalInfo.deployed()
+add = await AddMedicalInfo.deployed()
+
+get.addAuthorisedDoctor('address')
+add.addAuthorisedDoctor('address')
+

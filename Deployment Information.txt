@@ -1,0 +1,118 @@
+	
+
+Starting migrations...
+======================
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 29999915
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xda9af41b97c52e5207e92197866247392d3fa361911c4287a40de57adf191baf
+   > Blocks: 2            Seconds: 18
+   > contract address:    0xfe5e69f130Bb2dC84E50E37B3450CC5D3Ad45cbC
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.30892459999747328
+   > gas used:            199177
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00398354 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00398354 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'AccessControl'
+   -------------------------
+   > transaction hash:    0x7f4ebd73b306bc4791b3109f4e3b43009823be341bd09cc9b6c28c68b96c8add
+   > Blocks: 2            Seconds: 18
+   > contract address:    0xfc7b05B55c36e410D1eD81a554Bc8a26b65170d0
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.30282709999747328
+   > gas used:            304875
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0060975 ETH
+
+
+   Deploying 'Patients'
+   --------------------
+   > transaction hash:    0xc1127dc9197acf55082b8305028a8abfe9f5f3eac8618b083def781a01abb18a
+   > Blocks: 3            Seconds: 34
+   > contract address:    0xf2Dc30F65059F3bD6F05DC4422fDED9d3093303F
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.27127837999747328
+   > gas used:            1577436
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.03154872 ETH
+
+
+   Deploying 'Doctors'
+   -------------------
+   > transaction hash:    0x14aa6d74e033f7096d7634b61a166c666e1a0221b1b7fbc4ea5996fb117b55d4
+   > Blocks: 1            Seconds: 6
+   > contract address:    0xBb6Ab36881268031dE7427F6c33242a982A0A253
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.25044711999747328
+   > gas used:            1041563
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02083126 ETH
+
+
+   Deploying 'Records'
+   -------------------
+   > transaction hash:    0xffe38bb8deda6e892a9ab36decae41538cd79b7e4fafb6c718c1f7718e334bad
+   > Blocks: 2            Seconds: 30
+   > contract address:    0x91f5df54A8D4AC3ff0F39763aFb1c89154bb0B63
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.22063139999747328
+   > gas used:            1490786
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02981572 ETH
+
+
+   Deploying 'GetMedicalInfo'
+   --------------------------
+   > transaction hash:    0x97b67e291459ec99e4ea951d7223205682f7d4d02f7f2bcb2a1743271f875859
+   > Blocks: 2            Seconds: 18
+   > contract address:    0x19b1970917E1Ec7D627924B65aaD0F4eac3BaD3b
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.16626397999747328
+   > gas used:            2718371
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05436742 ETH
+
+
+   Deploying 'AddMedicalInfo'
+   --------------------------
+   > transaction hash:    0x33d3193a553ce25549d38029f81e61e100518df54e88989d04e75e7a8b10dfdf
+   > Blocks: 2            Seconds: 18
+   > contract address:    0xB179ab9d325DFc545CfB69fC136Ef395f60482cb
+   > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
+   > balance:             0.11949775999747328
+   > gas used:            2338311
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.04676622 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.18942684 ETH
+
+
+Summary
+=======
+> Total deployments:   7
+> Final cost:          0.19341038 ETH
