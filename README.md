@@ -34,7 +34,7 @@ truffle console --network goerli: opens goerli console.
 Contains the Memonic and the address of the testnet <br>
 Format
 <br>
-API_URL = "https://eth-goerli.alchemyapi.io/v2/API_KEY"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/API_KEY" <br>
 MNEMONIC = "privatekey here"
 
 
