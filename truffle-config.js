@@ -23,6 +23,9 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+require('dotenv').config();
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+const { API_URL, MNEMONIC } = process.env;
 
 module.exports = {
     /**
@@ -47,6 +50,13 @@ module.exports = {
             port: 7545, // Standard Ethereum port (default: none)
             network_id: "*", // Any network (default: none)
         },
+        goerli: {
+            provider: function() {
+                return new HDWalletProvider(MNEMONIC, API_URL)
+            },
+            network_id: 5,
+            // gas: 4000000 //4M is the max
+        }
 
         // Another network with more advanced options...
         // advanced: {

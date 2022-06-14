@@ -16,6 +16,8 @@
     },
     "homepage": "https://github.com/Via5K/Blockchain-based-medical-health-records#readme",
     "dependencies": {
+        "@truffle/hdwallet-provider": "^2.0.9",
+        "dotenv": "^16.0.1",
         "solc": "^0.8.14-fixed"
     }
 }
