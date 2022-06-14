@@ -30,10 +30,13 @@ truffle migrate --reset --network <goerli - N/W Name>: Resets the contract deplo
 truffle console --network goerli: opens goerli console.
 
 
-## UPDATES MAIN: 
-2_deploy_contracts.js -> gas limit addeed
-truffle config updated
-created .env file
+## .env
+Contains the Memonic and the address of the testnet <br>
+Format
+<br>
+API_URL = "https://eth-goerli.alchemyapi.io/v2/API_KEY"
+MNEMONIC = "privatekey here"
+
 
 ## Giving Access:
 Access Nedds to be given for 2 Contracts (AddMedicalInfo & GetMedicalInfo) like this:
