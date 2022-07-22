@@ -4,9 +4,9 @@ If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migrati
 
 Starting migrations...
 ======================
-> Network name:    'development'
-> Network id:      5777
-> Block gas limit: 6721975
+> Network name:    'goerli'
+> Network id:      5
+> Block gas limit: 29999972
 
 
 1_initial_migration.js
@@ -14,19 +14,19 @@ Starting migrations...
 
    Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0x83bdcd56091e9ca338313f4271f513ca23a5101d5a00577ff11de616d52131c0
-   > Blocks: 0            Seconds: 0
-   > contract address:    0xeEa1deB4a4D1100576596E0eCF7cd8319175f87b
+   > transaction hash:    0x370d4637d076c2ad5d24ab630b0fe5eaae9ebe5df9f606d23d32ddb2658067c0
+   > Blocks: 1            Seconds: 10
+   > contract address:    0x76f54e69C9cE996240B2b1151199c38D65F09fC6
    > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
-   > balance:             91.11481666
-   > gas used:            197865
+   > balance:             1.796437732462892843
+   > gas used:            199165
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.0039573 ETH
+   > total cost:          0.0039833 ETH
 
    > Saving artifacts
    -------------------------------------
-   > Total cost:           0.0039573 ETH
+   > Total cost:           0.0039833 ETH
 
 
 2_deploy_contracts.js
@@ -34,24 +34,24 @@ Starting migrations...
 
    Deploying 'AccessControl'
    -------------------------
-   > transaction hash:    0x430b26b21898dea4a9f387b36166484cf9db6ea517e7ca5c8d6c8f7ed32d4aa7
-   > Blocks: 0            Seconds: 0
-   > contract address:    0x5cd9D1252FF3B3f0CD25C5d33636Fb1453a8Be76
+   > transaction hash:    0x96ecaa15b29f5de8e84b1b40db4c9869277e3d5e825f06081c641bf0436fb2fa
+   > Blocks: 2            Seconds: 18
+   > contract address:    0x7B2F53F389a5AE4eF79c524C4E9EBb9592FB0e83
    > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
-   > balance:             91.10653518
-   > gas used:            414074
+   > balance:             1.788118252462892843
+   > gas used:            415974
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.00828148 ETH
+   > total cost:          0.00831948 ETH
 
 
    Deploying 'Patients'
    --------------------
-   > transaction hash:    0xc5d610527e120a28d04f65a8576c328ef9abd423dd9f3ec083d67c4cc9ebab8e
-   > Blocks: 0            Seconds: 0
-   > contract address:    0xb4564028f05E2c25070747de2D2642288E363eCc
+   > transaction hash:    0x9944523710f970296f2b6d3262b95d9d35da7708231346a1043f427a8b3c9637
+   > Blocks: 2            Seconds: 18
+   > contract address:    0xd30FC7717590A9039eCD0f401Cc1a7C8B9c684eb
    > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
-   > balance:             91.06560878
+   > balance:             1.747191852462892843
    > gas used:            2046320
    > gas price:           20 gwei
    > value sent:          0 ETH
@@ -60,11 +60,11 @@ Starting migrations...
 
    Deploying 'Doctors'
    -------------------
-   > transaction hash:    0x3261ec1b3128292646fa3e86edb4cacc088406572dc36e0f5cb5e48e3a630a8d
-   > Blocks: 0            Seconds: 0
-   > contract address:    0x194A889BA16ca8A1c0272F7d53B35aF3F41eAeC5
+   > transaction hash:    0x1c5f76779d404e88b8c1d17fb49a184a095f898dd674b102a97be011bc54c2c0
+   > Blocks: 2            Seconds: 18
+   > contract address:    0x825FbD064d8418054Ddb7307d0E8ab72C6eD955f
    > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
-   > balance:             91.04477752
+   > balance:             1.726360592462892843
    > gas used:            1041563
    > gas price:           20 gwei
    > value sent:          0 ETH
@@ -73,11 +73,11 @@ Starting migrations...
 
    Deploying 'Records'
    -------------------
-   > transaction hash:    0x6ec0eb8cb87b1d8ce043e3a2e21ae351b720623e31fa3d98179d758d665c28d0
-   > Blocks: 0            Seconds: 0
-   > contract address:    0x6a2d57E750552c1a0A8c90603DFAD8213be7b124
+   > transaction hash:    0x19dcda7a7d58f961f356956ac4052faacedd1824d0c0699b5f7a1194a4f4834b
+   > Blocks: 2            Seconds: 18
+   > contract address:    0xF9b3f12B50C80ab5BF36517eE61e0f95dc820B3c
    > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
-   > balance:             91.0149618
+   > balance:             1.696544872462892843
    > gas used:            1490786
    > gas price:           20 gwei
    > value sent:          0 ETH
@@ -86,22 +86,22 @@ Starting migrations...
 
    Deploying 'MedicalInfoAddGet'
    -----------------------------
-   > transaction hash:    0x9cf45b40e6c9c77381282edcf2889a93c1cadfc826a084651ab08299ab02e4bf
-   > Blocks: 0            Seconds: 0
-   > contract address:    0x7463485Ef7A134F426ABa2f1142cf48332a2D18F
+   > transaction hash:    0xb03dd93b64dd0ff4f43eec38a206e0d078fd3aba2ebbfbffe221e0b5edd68bbd
+   > Blocks: 2            Seconds: 18
+   > contract address:    0x9dC0c0Bc3c011a2b485c43b2B0394011193A3415
    > account:             0x087298b2F76741E2D30566A7f5138D6896aBf108
-   > balance:             90.91666346
-   > gas used:            4914917
+   > balance:             1.598130532462892843
+   > gas used:            4920717
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.09829834 ETH
+   > total cost:          0.09841434 ETH
 
    > Saving artifacts
    -------------------------------------
-   > Total cost:           0.1981532 ETH
+   > Total cost:           0.1983072 ETH
 
 
 Summary
 =======
 > Total deployments:   6
-> Final cost:          0.2021105 ETH
+> Final cost:          0.2022905 ETH
