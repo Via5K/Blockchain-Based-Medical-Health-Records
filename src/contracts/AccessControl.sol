@@ -14,7 +14,6 @@ contract AccessControl {
     Address here stored are added by the contract owner only.
     ****/
 
-    // address[] authorisedDoctors;
     mapping(address => bool) public authorisedDoctor; //Created for easy check
 
     /*****
