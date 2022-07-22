@@ -1,1 +1,0 @@
-to create a server, use ```python -m http.server``` this will start the server on port 8000

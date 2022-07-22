@@ -34,8 +34,8 @@ Pass the wallet addreess of the user who is going to be the user and you are all
 
 ## Future Updates:
 
-1. Patient Have Permission to: Read Only
-2. Change the contract such that any other doctor can also add a doctor. And simultaneouly, the doctor can give the viewing rights to the patient. This will remove the need of the Owner.
+1. Patient Have Permission to: Read Only [DONE]
+2. Change the contract such that any other doctor can also add a doctor. And simultaneouly, the doctor can give the viewing rights to the patient. This will remove the need of the Owner. [DONE]
 
 ## Deployment Information:
 

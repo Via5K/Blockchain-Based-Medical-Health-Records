@@ -1,10 +1,2 @@
-images
 node_modules/
-Informations File Practice
-Patient.html
-index.html
-Doctor.html
-Record.html
-stylesheet.css
-.gitignore
 .env
