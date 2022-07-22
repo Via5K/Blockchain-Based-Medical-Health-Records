@@ -1,7 +1,6 @@
 ⚠️  Important ⚠️
 If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migration will hang.
 
-
 Starting migrations...
 ======================
 > Network name:    'goerli'
