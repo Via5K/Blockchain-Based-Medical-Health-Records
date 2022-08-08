@@ -1,4 +1,4 @@
-# Blockchain Based Medical Health Records [Blockchain Seciton]
+# Blockchain Based Medical Health Records [Blockchain Section]
 
 This Repository is a part of Blockchain based medical health record system, It includes the implementation of Blockchain section only. Full Project with working demo can be viewed here -> https://re-chain.vercel.app
 
