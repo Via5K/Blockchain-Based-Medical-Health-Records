@@ -83,22 +83,20 @@ You should have *Node* installed
 
 ## Running Commands in Terminal
 
-first, you have to create a instance of the deployment using `get = await GetMedicalInfo.deployed()`
+first, you have to create a instance of the deployment using `get = await Patients.deployed()`
 
-Now, we can access the GetMedicalInfo contract with the 'get' only. So all the functions can be accessed like this
+Now, we can access the Patients contract with the 'get' only. So all the functions can be accessed like this
 
-1. get.addAuthorisedDoctor('address')
+1. get.addPatientName('Name')
 
 Similarly, you can do it for other contracts. and call the functions with `instanceName.functionName('parameter')`
 
 ### Giving Access From Terminal (CLI):
 
-Access Nedds to be given for 2 Contracts (AddMedicalInfo & GetMedicalInfo) like this:
-
-get = await GetMedicalInfo.deployed()
-
-add = await AddMedicalInfo.deployed()
-
+Access Needs to be given for that you can simply goto GetMedicalInfoAddGet & authorise.
+```
+get = await GetMedicalInfoAddGet.deployed()
+```
+```
 get.addAuthorisedDoctor('address')
-
-add.addAuthorisedDoctor('address')
+```
