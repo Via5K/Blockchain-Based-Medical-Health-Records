@@ -15,8 +15,7 @@ Contract calls are made To record and View the patient data.
 ## Different Contracts Created Adn Usage
 
 * AccessControl - This is used to limit the users from accessing data. As medical records can be misused, This Access Control helps access the records either by the doctor or Patient only.
-* GetMedicalInfo - This contract is used to make call to multiple other contracts functions which fetches the information form the blockchain. Function GetMedicalInfoDoctor, which calls the contract *Doctor* and Furthermore the functions which fetches the information only.
-* AddMedicalInfo - This contract is used to send data to multiple other contracts functions which adds the information to the blockchain. Function AddMedicalInfoDoctor, will send the data to the contract *Doctor* and Furthermore the functions which adds the information only.
+* GetMedicalInfoAddGet - This contract is used to make call to multiple other contracts functions to fetch and add the information form and to the blockchain. Function GetMedicalInfoDoctor, which calls the contract *Doctor* and Furthermore the functions which fetches the information only. Function AddMedicalInfoDoctor, will send the data to the contract *Doctor* and Furthermore the functions which adds the information only.
 * Doctor - Contains the implementation of the Doctor Information.
 * Patient - Contains the implementaiton of the Patient Information
 * Records -  Contains the implementation of the Record keeping of the patient.
