@@ -1,6 +1,21 @@
 # Blockchain Based Medical Health Records [Blockchain Section]
 
-This Repository is a part of Blockchain based medical health record system, It includes the implementation of Blockchain section only. Full Project with working demo can be viewed at [Rechain](https://re-chain.vercel.app)
+This Repository is a part of Blockchain based medical health record system, It includes the implementation of Blockchain section only. Full Project with working demo can be viewed at [Re-chain](https://re-chain.vercel.app)
+
+## Doctor Account Access Wallet
+
+**_NOTE_:** this wallet is a publicly shared wallet so do not put any of your personal funds in it. Also, use it only for testing purpose and authorising other accounts to be doctor. To get More testnet Goerli Eth, Use faucets.
+
+*Wallet Address:* 0x26E0C4e0DeaE504f3ea6996D81F5Bc5357AC8A88
+
+*Private Key:* d5e0fc4036a051ea77e0f12470cd5783fc00d58a72642206df2520d7fcf33ac5
+
+Process to Authorise a new doctor.
+* Login with the above given account in your metamask
+* Now, connect with [re-chain](re-chain.vercel.app).
+* After this, visit [Admin Panel](re-chain.vercel.app/AdminPanel). 
+* Put a new address here that you want to authorise to become a doctor & confirm the transaction.
+* All done, now you can use the account that you have just authorised as a doctor account and check the [re-chain](re-chain.vercel.app).
 
 ## Blockchain
 
